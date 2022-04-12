@@ -1,6 +1,6 @@
 Fitter report for led1
-Mon Jun 17 11:59:07 2013
-Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+Sat Apr  9 16:37:07 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -10,129 +10,130 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. I/O Assignment Warnings
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Output Pins
- 13. Dual Purpose and Dedicated Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. Output Pin Default Load For Reported TCO
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Interconnect Usage Summary
- 20. I/O Rules Summary
- 21. I/O Rules Details
- 22. I/O Rules Matrix
- 23. Fitter Device Options
- 24. Operating Settings and Conditions
- 25. Fitter Messages
- 26. Fitter Suppressed Messages
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Output Pins
+ 12. Dual Purpose and Dedicated Pins
+ 13. I/O Bank Usage
+ 14. All Package Pins
+ 15. I/O Assignment Warnings
+ 16. Fitter Resource Utilization by Entity
+ 17. Delay Chain Summary
+ 18. Routing Usage Summary
+ 19. I/O Rules Summary
+ 20. I/O Rules Details
+ 21. I/O Rules Matrix
+ 22. Fitter Device Options
+ 23. Operating Settings and Conditions
+ 24. Fitter Messages
+ 25. Fitter Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Fitter Summary                                                                 ;
-+------------------------------------+-------------------------------------------+
-; Fitter Status                      ; Successful - Mon Jun 17 11:59:07 2013     ;
-; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Full Version ;
-; Revision Name                      ; led1                                      ;
-; Top-level Entity Name              ; led1                                      ;
-; Family                             ; Cyclone IV E                              ;
-; Device                             ; EP4CE6E22C8                               ;
-; Timing Models                      ; Final                                     ;
-; Total logic elements               ; 0 / 6,272 ( 0 % )                         ;
-;     Total combinational functions  ; 0 / 6,272 ( 0 % )                         ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                         ;
-; Total registers                    ; 0                                         ;
-; Total pins                         ; 4 / 92 ( 4 % )                            ;
-; Total virtual pins                 ; 0                                         ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                            ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                             ;
-+------------------------------------+-------------------------------------------+
++----------------------------------------------------------------------------------+
+; Fitter Summary                                                                   ;
++------------------------------------+---------------------------------------------+
+; Fitter Status                      ; Successful - Sat Apr  9 16:37:07 2022       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; led1                                        ;
+; Top-level Entity Name              ; led1                                        ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 0 / 6,272 ( 0 % )                           ;
+;     Total combinational functions  ; 0 / 6,272 ( 0 % )                           ;
+;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 4 / 92 ( 4 % )                              ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Settings                                                                                                                          ;
-+----------------------------------------------------------------------------+---------------------+---------------------------------------+
-; Option                                                                     ; Setting             ; Default Value                         ;
-+----------------------------------------------------------------------------+---------------------+---------------------------------------+
-; Device                                                                     ; EP4CE6E22C8         ;                                       ;
-; Minimum Core Junction Temperature                                          ; 0                   ;                                       ;
-; Maximum Core Junction Temperature                                          ; 85                  ;                                       ;
-; Fit Attempts to Skip                                                       ; 0                   ; 0.0                                   ;
-; Device I/O Standard                                                        ; 3.3-V LVTTL         ;                                       ;
-; Reserve all unused pins                                                    ; As input tri-stated ; As input tri-stated with weak pull-up ;
-; Use smart compilation                                                      ; Off                 ; Off                                   ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                                    ;
-; Enable compact report table                                                ; Off                 ; Off                                   ;
-; Use TimeQuest Timing Analyzer                                              ; On                  ; On                                    ;
-; Auto Merge PLLs                                                            ; On                  ; On                                    ;
-; Router Timing Optimization Level                                           ; Normal              ; Normal                                ;
-; Perform Clocking Topology Analysis During Routing                          ; Off                 ; Off                                   ;
-; Placement Effort Multiplier                                                ; 1.0                 ; 1.0                                   ;
-; Router Effort Multiplier                                                   ; 1.0                 ; 1.0                                   ;
-; Optimize Hold Timing                                                       ; All Paths           ; All Paths                             ;
-; Optimize Multi-Corner Timing                                               ; Off                 ; Off                                   ;
-; PowerPlay Power Optimization                                               ; Normal compilation  ; Normal compilation                    ;
-; SSN Optimization                                                           ; Off                 ; Off                                   ;
-; Optimize Timing                                                            ; Normal compilation  ; Normal compilation                    ;
-; Optimize Timing for ECOs                                                   ; Off                 ; Off                                   ;
-; Regenerate full fit report during ECO compiles                             ; Off                 ; Off                                   ;
-; Optimize IOC Register Placement for Timing                                 ; Normal              ; Normal                                ;
-; Limit to One Fitting Attempt                                               ; Off                 ; Off                                   ;
-; Final Placement Optimizations                                              ; Automatically       ; Automatically                         ;
-; Fitter Aggressive Routability Optimizations                                ; Automatically       ; Automatically                         ;
-; Fitter Initial Placement Seed                                              ; 1                   ; 1                                     ;
-; PCI I/O                                                                    ; Off                 ; Off                                   ;
-; Weak Pull-Up Resistor                                                      ; Off                 ; Off                                   ;
-; Enable Bus-Hold Circuitry                                                  ; Off                 ; Off                                   ;
-; Auto Packed Registers                                                      ; Auto                ; Auto                                  ;
-; Auto Delay Chains                                                          ; On                  ; On                                    ;
-; Allow Single-ended Buffer for Differential-XSTL Input                      ; Off                 ; Off                                   ;
-; Treat Bidirectional Pin as Output Pin                                      ; Off                 ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                 ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                 ; Off                                   ;
-; Perform Register Duplication for Performance                               ; Off                 ; Off                                   ;
-; Perform Logic to Memory Mapping for Fitting                                ; Off                 ; Off                                   ;
-; Perform Register Retiming for Performance                                  ; Off                 ; Off                                   ;
-; Perform Asynchronous Signal Pipelining                                     ; Off                 ; Off                                   ;
-; Fitter Effort                                                              ; Auto Fit            ; Auto Fit                              ;
-; Physical Synthesis Effort Level                                            ; Normal              ; Normal                                ;
-; Logic Cell Insertion - Logic Duplication                                   ; Auto                ; Auto                                  ;
-; Auto Register Duplication                                                  ; Auto                ; Auto                                  ;
-; Auto Global Clock                                                          ; On                  ; On                                    ;
-; Auto Global Register Control Signals                                       ; On                  ; On                                    ;
-; Synchronizer Identification                                                ; Off                 ; Off                                   ;
-; Enable Beneficial Skew Optimization                                        ; On                  ; On                                    ;
-; Optimize Design for Metastability                                          ; On                  ; On                                    ;
-; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                 ; Off                                   ;
-; Enable input tri-state on active configuration pins in user mode           ; Off                 ; Off                                   ;
-+----------------------------------------------------------------------------+---------------------+---------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                  ;
++--------------------------------------------------------------------+---------------------+---------------------------------------+
+; Option                                                             ; Setting             ; Default Value                         ;
++--------------------------------------------------------------------+---------------------+---------------------------------------+
+; Device                                                             ; EP4CE6E22C8         ;                                       ;
+; Minimum Core Junction Temperature                                  ; 0                   ;                                       ;
+; Maximum Core Junction Temperature                                  ; 85                  ;                                       ;
+; Fit Attempts to Skip                                               ; 0                   ; 0.0                                   ;
+; Device I/O Standard                                                ; 3.3-V LVTTL         ;                                       ;
+; Reserve all unused pins                                            ; As input tri-stated ; As input tri-stated with weak pull-up ;
+; Use smart compilation                                              ; Off                 ; Off                                   ;
+; Enable parallel Assembler and Timing Analyzer during compilation   ; On                  ; On                                    ;
+; Enable compact report table                                        ; Off                 ; Off                                   ;
+; Auto Merge PLLs                                                    ; On                  ; On                                    ;
+; Router Timing Optimization Level                                   ; Normal              ; Normal                                ;
+; Perform Clocking Topology Analysis During Routing                  ; Off                 ; Off                                   ;
+; Placement Effort Multiplier                                        ; 1.0                 ; 1.0                                   ;
+; Router Effort Multiplier                                           ; 1.0                 ; 1.0                                   ;
+; Optimize Hold Timing                                               ; All Paths           ; All Paths                             ;
+; Optimize Multi-Corner Timing                                       ; On                  ; On                                    ;
+; Power Optimization During Fitting                                  ; Normal compilation  ; Normal compilation                    ;
+; SSN Optimization                                                   ; Off                 ; Off                                   ;
+; Optimize Timing                                                    ; Normal compilation  ; Normal compilation                    ;
+; Optimize Timing for ECOs                                           ; Off                 ; Off                                   ;
+; Regenerate Full Fit Report During ECO Compiles                     ; Off                 ; Off                                   ;
+; Optimize IOC Register Placement for Timing                         ; Normal              ; Normal                                ;
+; Limit to One Fitting Attempt                                       ; Off                 ; Off                                   ;
+; Final Placement Optimizations                                      ; Automatically       ; Automatically                         ;
+; Fitter Aggressive Routability Optimizations                        ; Automatically       ; Automatically                         ;
+; Fitter Initial Placement Seed                                      ; 1                   ; 1                                     ;
+; Periphery to Core Placement and Routing Optimization               ; Off                 ; Off                                   ;
+; PCI I/O                                                            ; Off                 ; Off                                   ;
+; Weak Pull-Up Resistor                                              ; Off                 ; Off                                   ;
+; Enable Bus-Hold Circuitry                                          ; Off                 ; Off                                   ;
+; Auto Packed Registers                                              ; Auto                ; Auto                                  ;
+; Auto Delay Chains                                                  ; On                  ; On                                    ;
+; Auto Delay Chains for High Fanout Input Pins                       ; Off                 ; Off                                   ;
+; Allow Single-ended Buffer for Differential-XSTL Input              ; Off                 ; Off                                   ;
+; Treat Bidirectional Pin as Output Pin                              ; Off                 ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Fitting     ; Off                 ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Performance ; Off                 ; Off                                   ;
+; Perform Register Duplication for Performance                       ; Off                 ; Off                                   ;
+; Perform Logic to Memory Mapping for Fitting                        ; Off                 ; Off                                   ;
+; Perform Register Retiming for Performance                          ; Off                 ; Off                                   ;
+; Perform Asynchronous Signal Pipelining                             ; Off                 ; Off                                   ;
+; Fitter Effort                                                      ; Auto Fit            ; Auto Fit                              ;
+; Physical Synthesis Effort Level                                    ; Normal              ; Normal                                ;
+; Logic Cell Insertion - Logic Duplication                           ; Auto                ; Auto                                  ;
+; Auto Register Duplication                                          ; Auto                ; Auto                                  ;
+; Auto Global Clock                                                  ; On                  ; On                                    ;
+; Auto Global Register Control Signals                               ; On                  ; On                                    ;
+; Synchronizer Identification                                        ; Off                 ; Off                                   ;
+; Enable Beneficial Skew Optimization                                ; On                  ; On                                    ;
+; Optimize Design for Metastability                                  ; On                  ; On                                    ;
+; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                 ; Off                                   ;
+; Enable input tri-state on active configuration pins in user mode   ; Off                 ; Off                                   ;
++--------------------------------------------------------------------+---------------------+---------------------------------------+
 
 
 +------------------------------------------+
@@ -140,43 +141,31 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2 processors           ; < 0.1%      ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------+
-; I/O Assignment Warnings           ;
-+----------+------------------------+
-; Pin Name ; Reason                 ;
-+----------+------------------------+
-; led[0]   ; Missing drive strength ;
-; led[1]   ; Missing drive strength ;
-; led[2]   ; Missing drive strength ;
-; led[3]   ; Missing drive strength ;
-+----------+------------------------+
-
-
-+----------------------------------------------+
-; Incremental Compilation Preservation Summary ;
-+---------------------+------------------------+
-; Type                ; Value                  ;
-+---------------------+------------------------+
-; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 17 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 17 ( 0.00 % )      ;
-;                     ;                        ;
-; Routing (by net)    ;                        ;
-;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
-+---------------------+------------------------+
++-------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                    ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Placement (by node) ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 17 ) ; 0.00 % ( 0 / 17 )          ; 0.00 % ( 0 / 17 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 17 ) ; 0.00 % ( 0 / 17 )          ; 0.00 % ( 0 / 17 )        ;
+;                     ;                   ;                            ;                          ;
+; Routing (by net)    ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+-------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,20 +178,20 @@ applicable agreement for further details.
 +--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Incremental Compilation Placement Preservation                                                             ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 9       ; 0                 ; N/A                     ; Source File       ;
-; hard_block:auto_generated_inst ; 8       ; 0                 ; N/A                     ; Source File       ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                                                     ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Top                            ; 0.00 % ( 0 / 9 )      ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 8 )      ; N/A                     ; Source File       ; N/A                 ;       ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
+The pin-out file can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 01 light 4 LED/led/led1.pin.
 
 
 +-------------------------------------------------------------------+
@@ -230,27 +219,26 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )     ;
 ;                                             ;                     ;
 ; Total LABs:  partially or completely used   ; 0 / 392 ( 0 % )     ;
-; User inserted logic elements                ; 0                   ;
 ; Virtual pins                                ; 0                   ;
 ; I/O pins                                    ; 4 / 92 ( 4 % )      ;
 ;     -- Clock pins                           ; 0 / 3 ( 0 % )       ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )       ;
-; Global signals                              ; 0                   ;
+;                                             ;                     ;
 ; M9Ks                                        ; 0 / 30 ( 0 % )      ;
 ; Total block memory bits                     ; 0 / 276,480 ( 0 % ) ;
 ; Total block memory implementation bits      ; 0 / 276,480 ( 0 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 30 ( 0 % )      ;
 ; PLLs                                        ; 0 / 2 ( 0 % )       ;
-; Global clocks                               ; 0 / 10 ( 0 % )      ;
+; Global signals                              ; 0                   ;
+;     -- Global clocks                        ; 0 / 10 ( 0 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
-; Maximum fan-out node                        ; led[0]~output       ;
+; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%  ;
+; Peak interconnect usage (total/H/V)         ; 0.0% / 0.0% / 0.0%  ;
 ; Maximum fan-out                             ; 1                   ;
-; Highest non-global fan-out signal           ; led[0]~output       ;
 ; Highest non-global fan-out                  ; 1                   ;
 ; Total fan-out                               ; 8                   ;
 ; Average fan-out                             ; 0.50                ;
@@ -328,16 +316,16 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 +---------------------------------------------+------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                              ;
-+--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+------+----------------------+---------------------+
-; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+------+----------------------+---------------------+
-; led[0] ; 87    ; 5        ; 34           ; 10           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; 0 pF ; -                    ; -                   ;
-; led[1] ; 86    ; 5        ; 34           ; 9            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; 0 pF ; -                    ; -                   ;
-; led[2] ; 85    ; 5        ; 34           ; 9            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; 0 pF ; -                    ; -                   ;
-; led[3] ; 84    ; 5        ; 34           ; 9            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; 0 pF ; -                    ; -                   ;
-+--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+------+----------------------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; led[0] ; 87    ; 5        ; 34           ; 10           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; led[1] ; 86    ; 5        ; 34           ; 9            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; led[2] ; 85    ; 5        ; 34           ; 9            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; led[3] ; 84    ; 5        ; 34           ; 9            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
++--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -389,7 +377,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 4        ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 5        ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 6        ; 5          ; 1        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 7        ; 6          ; 1        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 7        ; 6          ; 1        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 8        ; 7          ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 9        ; 9          ; 1        ; ^nSTATUS                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 10       ; 13         ; 1        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -413,7 +401,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 28       ; 31         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 29       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 30       ; 34         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 31       ; 36         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 31       ; 36         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 32       ; 39         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 33       ; 40         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 34       ; 41         ; 2        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -428,7 +416,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 43       ; 53         ; 3        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 44       ; 54         ; 3        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 45       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 46       ; 58         ; 3        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 46       ; 58         ; 3        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 47       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 48       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 49       ; 68         ; 3        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -447,7 +435,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 62       ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 63       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 64       ; 89         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 65       ; 90         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 65       ; 90         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 66       ; 93         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 67       ; 94         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 68       ; 96         ; 4        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -462,7 +450,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 77       ; 107        ; 5        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 78       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 79       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 80       ; 113        ; 5        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 80       ; 113        ; 5        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 81       ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 82       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 83       ; 117        ; 5        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -488,7 +476,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 102      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 103      ; 140        ; 6        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 104      ; 141        ; 6        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 105      ; 142        ; 6        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 105      ; 142        ; 6        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 106      ; 146        ; 6        ; RESERVED_INPUT                                            ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 107      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 108      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -502,7 +490,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 116      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 117      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 118      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 119      ; 163        ; 7        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 119      ; 163        ; 7        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 120      ; 164        ; 7        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 121      ; 165        ; 7        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 122      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -519,7 +507,7 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 ; 133      ; 182        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 134      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 135      ; 185        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 136      ; 187        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 136      ; 187        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 137      ; 190        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 138      ; 191        ; 8        ; RESERVED_INPUT                                            ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 139      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -533,63 +521,25 @@ The pin-out file can be found in D:/For_study/02_interface/ok/01_led1/led1.pin.
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-------------------------------------------------------------------------------+
-; Output Pin Default Load For Reported TCO                                      ;
-+----------------------------------+-------+------------------------------------+
-; I/O Standard                     ; Load  ; Termination Resistance             ;
-+----------------------------------+-------+------------------------------------+
-; 3.0-V LVTTL                      ; 0 pF  ; Not Available                      ;
-; 3.3-V LVTTL                      ; 0 pF  ; Not Available                      ;
-; 3.0-V LVCMOS                     ; 0 pF  ; Not Available                      ;
-; 3.3-V LVCMOS                     ; 0 pF  ; Not Available                      ;
-; 3.0-V PCI                        ; 10 pF ; Not Available                      ;
-; 3.0-V PCI-X                      ; 10 pF ; Not Available                      ;
-; 2.5 V                            ; 0 pF  ; Not Available                      ;
-; 1.8 V                            ; 0 pF  ; Not Available                      ;
-; 1.5 V                            ; 0 pF  ; Not Available                      ;
-; 1.2 V                            ; 0 pF  ; Not Available                      ;
-; SSTL-2 Class I                   ; 0 pF  ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
-; Differential 2.5-V SSTL Class I  ; 0 pF  ; (See SSTL-2)                       ;
-; SSTL-2 Class II                  ; 0 pF  ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
-; Differential 2.5-V SSTL Class II ; 0 pF  ; (See SSTL-2 Class II)              ;
-; SSTL-18 Class I                  ; 0 pF  ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
-; Differential 1.8-V SSTL Class I  ; 0 pF  ; (See 1.8-V SSTL Class I)           ;
-; SSTL-18 Class II                 ; 0 pF  ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
-; Differential 1.8-V SSTL Class II ; 0 pF  ; (See 1.8-V SSTL Class II)          ;
-; 1.8-V HSTL Class I               ; 0 pF  ; 50 Ohm (Parallel)                  ;
-; Differential 1.8-V HSTL Class I  ; 0 pF  ; (See 1.8-V HSTL Class I)           ;
-; 1.8-V HSTL Class II              ; 0 pF  ; 25 Ohm (Parallel)                  ;
-; Differential 1.8-V HSTL Class II ; 0 pF  ; (See 1.8-V HSTL Class II)          ;
-; 1.5-V HSTL Class I               ; 0 pF  ; 50 Ohm (Parallel)                  ;
-; Differential 1.5-V HSTL Class I  ; 0 pF  ; (See 1.5-V HSTL Class I)           ;
-; 1.5-V HSTL Class II              ; 0 pF  ; 25 Ohm (Parallel)                  ;
-; Differential 1.5-V HSTL Class II ; 0 pF  ; (See 1.5-V HSTL Class II)          ;
-; 1.2-V HSTL Class I               ; 0 pF  ; Not Available                      ;
-; Differential 1.2-V HSTL Class I  ; 0 pF  ; Not Available                      ;
-; 1.2-V HSTL Class II              ; 0 pF  ; Not Available                      ;
-; Differential 1.2-V HSTL Class II ; 0 pF  ; Not Available                      ;
-; Differential LVPECL              ; 0 pF  ; 100 Ohm (Differential)             ;
-; LVDS                             ; 0 pF  ; 100 Ohm (Differential)             ;
-; LVDS_E_3R                        ; 0 pF  ; Not Available                      ;
-; RSDS                             ; 0 pF  ; 100 Ohm (Differential)             ;
-; RSDS_E_1R                        ; 0 pF  ; Not Available                      ;
-; RSDS_E_3R                        ; 0 pF  ; Not Available                      ;
-; mini-LVDS                        ; 0 pF  ; 100 Ohm (Differential)             ;
-; mini-LVDS_E_3R                   ; 0 pF  ; Not Available                      ;
-; PPDS                             ; 0 pF  ; Not Available                      ;
-; PPDS_E_3R                        ; 0 pF  ; Not Available                      ;
-; Bus LVDS                         ; 0 pF  ; Not Available                      ;
-+----------------------------------+-------+------------------------------------+
-Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
++-----------------------------------+
+; I/O Assignment Warnings           ;
++----------+------------------------+
+; Pin Name ; Reason                 ;
++----------+------------------------+
+; led[0]   ; Missing drive strength ;
+; led[1]   ; Missing drive strength ;
+; led[2]   ; Missing drive strength ;
+; led[3]   ; Missing drive strength ;
++----------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |led1                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |led1               ;              ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
+; |led1                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |led1               ; led1        ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -605,20 +555,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-------------------------------------------------+
-; Interconnect Usage Summary                      ;
-+----------------------------+--------------------+
-; Interconnect Resource Type ; Usage              ;
-+----------------------------+--------------------+
-; Block interconnects        ; 0 / 32,401 ( 0 % ) ;
-; C16 interconnects          ; 0 / 1,326 ( 0 % )  ;
-; C4 interconnects           ; 0 / 21,816 ( 0 % ) ;
-; Direct links               ; 0 / 32,401 ( 0 % ) ;
-; Global clocks              ; 0 / 10 ( 0 % )     ;
-; Local interconnects        ; 0 / 10,320 ( 0 % ) ;
-; R24 interconnects          ; 0 / 1,289 ( 0 % )  ;
-; R4 interconnects           ; 0 / 28,186 ( 0 % ) ;
-+----------------------------+--------------------+
++--------------------------------------------+
+; Routing Usage Summary                      ;
++-----------------------+--------------------+
+; Routing Resource Type ; Usage              ;
++-----------------------+--------------------+
+; Block interconnects   ; 0 / 32,401 ( 0 % ) ;
+; C16 interconnects     ; 0 / 1,326 ( 0 % )  ;
+; C4 interconnects      ; 0 / 21,816 ( 0 % ) ;
+; Direct links          ; 0 / 32,401 ( 0 % ) ;
+; Global clocks         ; 0 / 10 ( 0 % )     ;
+; Local interconnects   ; 0 / 10,320 ( 0 % ) ;
+; R24 interconnects     ; 0 / 1,289 ( 0 % )  ;
+; R4 interconnects      ; 0 / 28,186 ( 0 % ) ;
++-----------------------+--------------------+
 
 
 +------------------------------------------+
@@ -639,33 +589,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+------+-------------------+
 ; Status       ; ID        ; Category                          ; Rule Description                                                                                     ; Severity ; Information                                                              ; Area ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+------+-------------------+
-; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.                    ; Critical ; No Global Signal assignments found.                                      ; I/O  ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                                     ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O  ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                                  ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O  ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                                                 ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                                       ; Critical ; No reserved LogicLock region found.                                      ; I/O  ;                   ;
-; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                                              ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
-; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                                             ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
-; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                                          ; Critical ; No Current Strength assignments found.                                   ; I/O  ;                   ;
-; Inapplicable ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.                                 ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
-; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                                            ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O  ;                   ;
-; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                                        ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O  ;                   ;
-; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                                           ; Critical ; No PCI I/O assignments found.                                            ; I/O  ;                   ;
-; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                                      ; Critical ; No Current Strength assignments found.                                   ; I/O  ;                   ;
-; Inapplicable ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.                             ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
-; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                                       ; Critical ; No PCI I/O assignments found.                                            ; I/O  ;                   ;
-; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                                    ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O  ;                   ;
-; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                                        ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O  ;                   ;
-; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                                                ; Critical ; No open drain assignments found.                                         ; I/O  ;                   ;
-; Inapplicable ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                                      ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
-; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.                        ; Critical ; No Current Strength or Termination assignments found.                    ; I/O  ;                   ;
-; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                                       ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O  ;                   ;
-; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                                       ; Critical ; No Slew Rate assignments found.                                          ; I/O  ;                   ;
-; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                                           ; Critical ; No Slew Rate assignments found.                                          ; I/O  ;                   ;
 ; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.                               ; Critical ; No Slew Rate assignments found.                                          ; I/O  ;                   ;
+; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                                           ; Critical ; No Slew Rate assignments found.                                          ; I/O  ;                   ;
+; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                                       ; Critical ; No Slew Rate assignments found.                                          ; I/O  ;                   ;
+; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                                       ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O  ;                   ;
+; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.                        ; Critical ; No Current Strength or Termination assignments found.                    ; I/O  ;                   ;
+; Inapplicable ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                                      ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
+; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                                                ; Critical ; No open drain assignments found.                                         ; I/O  ;                   ;
+; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                                        ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O  ;                   ;
+; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                                    ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O  ;                   ;
+; Inapplicable ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                                       ; Critical ; No PCI I/O assignments found.                                            ; I/O  ;                   ;
+; Inapplicable ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.                             ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
+; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                                      ; Critical ; No Current Strength assignments found.                                   ; I/O  ;                   ;
+; Inapplicable ; IO_000015 ; I/O Properties Checks for One I/O ; The location should support the requested PCI Clamp Diode.                                           ; Critical ; No PCI I/O assignments found.                                            ; I/O  ;                   ;
+; Inapplicable ; IO_000014 ; I/O Properties Checks for One I/O ; The location should support the requested Weak Pull Up value.                                        ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O  ;                   ;
+; Inapplicable ; IO_000013 ; I/O Properties Checks for One I/O ; The location should support the requested Bus Hold value.                                            ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O  ;                   ;
+; Inapplicable ; IO_000012 ; I/O Properties Checks for One I/O ; The location should support the requested On Chip Termination value.                                 ; Critical ; No Termination assignments found.                                        ; I/O  ;                   ;
+; Inapplicable ; IO_000011 ; I/O Properties Checks for One I/O ; The location should support the requested Current Strength.                                          ; Critical ; No Current Strength assignments found.                                   ; I/O  ;                   ;
+; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                                             ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
+; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                                              ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Pass         ; IO_000033 ; Electromigration Checks           ; Current density for consecutive I/Os should not exceed 240mA for row I/Os and 240mA for column I/Os. ; Critical ; 0 such failures found.                                                   ; I/O  ;                   ;
 ; Inapplicable ; IO_000034 ; SI Related Distance Checks        ; Single-ended outputs should be 5 LAB row(s) away from a differential I/O.                            ; High     ; No Differential I/O Standard assignments found.                          ; I/O  ;                   ;
 ; Inapplicable ; IO_000042 ; SI Related SSO Limit Checks       ; No more than 20 outputs are allowed in a VREF group when VREF is being read from.                    ; High     ; No VREF I/O Standard assignments found.                                  ; I/O  ;                   ;
@@ -674,18 +624,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 4         ; 0            ; 4         ; 0            ; 0            ; 4         ; 4         ; 0            ; 4         ; 4         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 4         ; 0            ; 0            ;
-; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 4            ; 0         ; 4            ; 4            ; 0         ; 0         ; 4            ; 0         ; 0         ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 0         ; 4            ; 4            ;
-; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; led[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; led[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; led[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; led[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-+--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
+; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
+; Total Pass         ; 0            ; 4         ; 4         ; 0            ; 0            ; 4         ; 4         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 4         ; 4         ; 4         ; 0            ; 0            ;
+; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
+; Total Inapplicable ; 4            ; 0         ; 0         ; 4            ; 4            ; 0         ; 0         ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 4            ; 0         ; 0         ; 0         ; 4            ; 4            ;
+; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
+; led[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; led[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; led[2]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; led[3]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
++--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -710,7 +660,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FLASH_nCE/nCSO                                                   ; Compiler configured      ;
 ; Other Active Parallel pins                                       ; Compiler configured      ;
 ; DCLK                                                             ; As output driving ground ;
-; Base pin-out file on sameframe device                            ; Off                      ;
 +------------------------------------------------------------------+--------------------------+
 
 
@@ -728,63 +677,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info: *******************************************************************
-Info: Running Quartus II Fitter
-    Info: Version 11.0 Build 157 04/27/2011 SJ Full Version
-    Info: Processing started: Mon Jun 17 11:59:03 2013
-Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off led1 -c led1
-Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info: Selected device EP4CE6E22C8 for design "led1"
-Info: Low junction temperature is 0 degrees C
-Info: High junction temperature is 85 degrees C
-Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
-Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
-    Info: Device EP4CE10E22C8 is compatible
-    Info: Device EP4CE15E22C8 is compatible
-    Info: Device EP4CE22E22C8 is compatible
-Info: Fitter converted 4 user pins into dedicated programming pins
-    Info: Pin ~ALTERA_FLASH_nCE_nCSO~ is reserved at location 8
-    Info: Pin ~ALTERA_DCLK~ is reserved at location 12
-    Info: Pin ~ALTERA_DATA0~ is reserved at location 13
-    Info: Pin ~ALTERA_nCEO~ is reserved at location 101
-Warning: Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
-Critical Warning: Synopsys Design Constraints File file not found: 'led1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info: No user constrained base clocks found in the design
-Info: The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning: No clocks defined in design.
-Info: No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info: The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info: Starting register packing
-Info: Finished register packing
-    Extra Info: No registers were packed into other blocks
-Info: Fitter preparation operations ending: elapsed time is 00:00:00
-Info: Fitter placement preparation operations beginning
-Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
-Info: Fitter placement operations beginning
-Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Fitter routing operations beginning
-Info: Router estimated average interconnect usage is 0% of the available device resources
-    Info: Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
-Info: Fitter routing operations ending: elapsed time is 00:00:00
-Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
-    Info: Optimizations that may affect the design's routability were skipped
-    Info: Optimizations that may affect the design's timing were skipped
-Info: Started post-fitting delay annotation
-Info: Delay annotation completed successfully
-Info: Generated suppressed messages file D:/For_study/02_interface/ok/01_led1/led1.fit.smsg
-Info: Quartus II Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 318 megabytes
-    Info: Processing ended: Mon Jun 17 11:59:07 2013
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (119006): Selected device EP4CE6E22C8 for design "led1"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EP4CE10E22C8 is compatible
+    Info (176445): Device EP4CE15E22C8 is compatible
+    Info (176445): Device EP4CE22E22C8 is compatible
+Info (169124): Fitter converted 4 user pins into dedicated programming pins
+    Info (169125): Pin ~ALTERA_FLASH_nCE_nCSO~ is reserved at location 8
+    Info (169125): Pin ~ALTERA_DCLK~ is reserved at location 12
+    Info (169125): Pin ~ALTERA_DATA0~ is reserved at location 13
+    Info (169125): Pin ~ALTERA_nCEO~ is reserved at location 101
+Info (12825): Data[1]/ASDO dual-purpose pin not reserved
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'led1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (144001): Generated suppressed messages file /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 01 light 4 LED/led/led1.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 1103 megabytes
+    Info: Processing ended: Sat Apr  9 16:37:08 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/For_study/02_interface/ok/01_led1/led1.fit.smsg.
+The suppressed messages can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 01 light 4 LED/led/led1.fit.smsg.
 
 

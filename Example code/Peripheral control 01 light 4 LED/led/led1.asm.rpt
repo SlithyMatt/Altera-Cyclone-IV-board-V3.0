@@ -1,6 +1,6 @@
 Assembler report for led1
-Mon Jun 17 11:59:10 2013
-Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+Sat Apr  9 16:37:10 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/For_study/02_interface/ok/01_led1/led1.sof
-  6. Assembler Device Options: D:/For_study/02_interface/ok/01_led1/led1.pof
+  5. Assembler Device Options: led1.sof
+  6. Assembler Device Options: led1.pof
   7. Assembler Messages
 
 
@@ -19,26 +19,27 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 17 11:59:10 2013 ;
+; Assembler Status      ; Successful - Sat Apr  9 16:37:10 2022 ;
 ; Revision Name         ; led1                                  ;
 ; Top-level Entity Name ; led1                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -46,84 +47,58 @@ applicable agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Assembler Settings                                                                                     ;
-+-----------------------------------------------------------------------------+----------+---------------+
-; Option                                                                      ; Setting  ; Default Value ;
-+-----------------------------------------------------------------------------+----------+---------------+
-; Use configuration device                                                    ; On       ; Off           ;
-; Use smart compilation                                                       ; Off      ; Off           ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation  ; On       ; On            ;
-; Enable compact report table                                                 ; Off      ; Off           ;
-; Generate compressed bitstreams                                              ; On       ; On            ;
-; Compression mode                                                            ; Off      ; Off           ;
-; Clock source for configuration device                                       ; Internal ; Internal      ;
-; Clock frequency of the configuration device                                 ; 10 MHZ   ; 10 MHz        ;
-; Divide clock frequency by                                                   ; 1        ; 1             ;
-; Auto user code                                                              ; Off      ; Off           ;
-; Configuration device                                                        ; Auto     ; Auto          ;
-; Configuration device auto user code                                         ; Off      ; Off           ;
-; Generate Tabular Text File (.ttf) For Target Device                         ; Off      ; Off           ;
-; Generate Raw Binary File (.rbf) For Target Device                           ; Off      ; Off           ;
-; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device ; Off      ; Off           ;
-; Hexadecimal Output File start address                                       ; 0        ; 0             ;
-; Hexadecimal Output File count direction                                     ; Up       ; Up            ;
-; Release clears before tri-states                                            ; Off      ; Off           ;
-; Auto-restart configuration after error                                      ; On       ; On            ;
-; Enable OCT_DONE                                                             ; Off      ; Off           ;
-; Generate Serial Vector Format File (.svf) for Target Device                 ; Off      ; Off           ;
-; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; Off      ; Off           ;
-; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; Off      ; Off           ;
-; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; On       ; On            ;
-+-----------------------------------------------------------------------------+----------+---------------+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
 
 
-+-----------------------------------------------+
-; Assembler Generated Files                     ;
-+-----------------------------------------------+
-; File Name                                     ;
-+-----------------------------------------------+
-; D:/For_study/02_interface/ok/01_led1/led1.sof ;
-; D:/For_study/02_interface/ok/01_led1/led1.pof ;
-+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                     ;
++---------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------+
+; /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 01 light 4 LED/led/led1.sof ;
+; /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 01 light 4 LED/led/led1.pof ;
++---------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Device Options: D:/For_study/02_interface/ok/01_led1/led1.sof ;
-+----------------+--------------------------------------------------------+
-; Option         ; Setting                                                ;
-+----------------+--------------------------------------------------------+
-; Device         ; EP4CE6E22C8                                            ;
-; JTAG usercode  ; 0xFFFFFFFF                                             ;
-; Checksum       ; 0x000927CA                                             ;
-+----------------+--------------------------------------------------------+
++------------------------------------+
+; Assembler Device Options: led1.sof ;
++----------------+-------------------+
+; Option         ; Setting           ;
++----------------+-------------------+
+; JTAG usercode  ; 0xFFFFFFFF        ;
+; Checksum       ; 0x000927BD        ;
++----------------+-------------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Device Options: D:/For_study/02_interface/ok/01_led1/led1.pof ;
-+--------------------+----------------------------------------------------+
-; Option             ; Setting                                            ;
-+--------------------+----------------------------------------------------+
-; Device             ; EPCS4                                              ;
-; JTAG usercode      ; 0x00000000                                         ;
-; Checksum           ; 0x06785085                                         ;
-; Compression Ratio  ; 3                                                  ;
-+--------------------+----------------------------------------------------+
++------------------------------------+
+; Assembler Device Options: led1.pof ;
++--------------------+---------------+
+; Option             ; Setting       ;
++--------------------+---------------+
+; JTAG usercode      ; 0x00000000    ;
+; Checksum           ; 0x067851EF    ;
+; Compression Ratio  ; 3             ;
++--------------------+---------------+
 
 
 +--------------------+
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II Assembler
-    Info: Version 11.0 Build 157 04/27/2011 SJ Full Version
-    Info: Processing started: Mon Jun 17 11:59:09 2013
+Info: Running Quartus Prime Assembler
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Sat Apr  9 16:37:09 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off led1 -c led1
-Info: Writing out detailed assembly data for power analysis
-Info: Assembler is generating device programming files
-Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 220 megabytes
-    Info: Processing ended: Mon Jun 17 11:59:10 2013
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115031): Writing out detailed assembly data for power analysis
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 360 megabytes
+    Info: Processing ended: Sat Apr  9 16:37:10 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

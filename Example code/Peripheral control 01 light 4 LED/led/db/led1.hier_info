@@ -1,3 +1,7 @@
 |led1
+led[0] <= <GND>
+led[1] <= <VCC>
+led[2] <= <VCC>
+led[3] <= <VCC>
 
 

@@ -1,0 +1,27 @@
+|digits
+clk => dig_clk[0].CLK
+clk => dig_clk[1].CLK
+clk => dig_clk[2].CLK
+clk => dig_clk[3].CLK
+clk => dig_clk[4].CLK
+clk => dig_clk[5].CLK
+clk => dig_clk[6].CLK
+clk => dig_clk[7].CLK
+clk => dig_clk[8].CLK
+clk => dig_clk[9].CLK
+clk => dig_clk[10].CLK
+clk => dig_clk[11].CLK
+dig[0] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+dig[1] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+dig[2] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+dig[3] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= <GND>
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= <VCC>
+
+

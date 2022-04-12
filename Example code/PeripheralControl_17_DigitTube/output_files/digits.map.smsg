@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at digits.v(41): always construct contains both blocking and non-blocking assignments File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 41
