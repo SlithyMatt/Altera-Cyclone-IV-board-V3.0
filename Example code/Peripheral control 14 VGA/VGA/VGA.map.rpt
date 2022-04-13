@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Wed Apr 13 00:19:33 2022
+Wed Apr 13 15:28:05 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,11 +14,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |VGA
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |VGA
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 00:19:33 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 15:28:05 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; VGA                                         ;
 ; Top-level Entity Name              ; VGA                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 85                                          ;
-;     Total combinational functions  ; 85                                          ;
-;     Dedicated logic registers      ; 30                                          ;
-; Total registers                    ; 30                                          ;
+; Total logic elements               ; 56                                          ;
+;     Total combinational functions  ; 56                                          ;
+;     Dedicated logic registers      ; 24                                          ;
+; Total registers                    ; 24                                          ;
 ; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -178,20 +177,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 85      ;
+; Estimated Total logic elements              ; 56      ;
 ;                                             ;         ;
-; Total combinational functions               ; 85      ;
+; Total combinational functions               ; 56      ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 42      ;
-;     -- 3 input functions                    ; 9       ;
-;     -- <=2 input functions                  ; 34      ;
+;     -- 4 input functions                    ; 28      ;
+;     -- 3 input functions                    ; 1       ;
+;     -- <=2 input functions                  ; 27      ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 67      ;
+;     -- normal mode                          ; 38      ;
 ;     -- arithmetic mode                      ; 18      ;
 ;                                             ;         ;
-; Total registers                             ; 30      ;
-;     -- Dedicated logic registers            ; 30      ;
+; Total registers                             ; 24      ;
+;     -- Dedicated logic registers            ; 24      ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
 ; I/O pins                                    ; 8       ;
@@ -199,9 +198,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ;                                             ;         ;
 ; Maximum fan-out node                        ; vga_clk ;
-; Maximum fan-out                             ; 30      ;
-; Total fan-out                               ; 343     ;
-; Average fan-out                             ; 2.62    ;
+; Maximum fan-out                             ; 24      ;
+; Total fan-out                               ; 240     ;
+; Average fan-out                             ; 2.50    ;
 +---------------------------------------------+---------+
 
 
@@ -210,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |VGA                       ; 85 (85)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |VGA                ; VGA         ; work         ;
+; |VGA                       ; 56 (56)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |VGA                ; VGA         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,23 +219,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 13    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |VGA|data[0]               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -262,20 +252,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 8                           ;
-; cycloneiii_ff         ; 30                          ;
-;     ENA               ; 10                          ;
-;     plain             ; 20                          ;
-; cycloneiii_lcell_comb ; 85                          ;
+; cycloneiii_ff         ; 24                          ;
+;     ENA               ; 13                          ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 56                          ;
 ;     arith             ; 18                          ;
 ;         2 data inputs ; 18                          ;
-;     normal            ; 67                          ;
+;     normal            ; 38                          ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 42                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.28                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -294,22 +284,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 00:19:27 2022
+    Info: Processing started: Wed Apr 13 15:27:59 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file VGA.v
     Info (12023): Found entity 1: VGA File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 4
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at VGA.v(21): object "v_dat" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 21
+Warning (10030): Net "vram.data_a" at VGA.v(43) has no driver or initial value, using a default initial value '0' File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 43
+Warning (10030): Net "vram.waddr_a" at VGA.v(43) has no driver or initial value, using a default initial value '0' File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 43
+Warning (10030): Net "vram.we_a" at VGA.v(43) has no driver or initial value, using a default initial value '0' File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 43
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "vram" is uninferred due to inappropriate RAM size File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 43
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switch[0]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 12
+    Warning (15610): No output dependent on input pin "switch[1]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 14 VGA/VGA/VGA.v Line: 12
+Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 85 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 367 megabytes
-    Info: Processing ended: Wed Apr 13 00:19:33 2022
+    Info (21061): Implemented 56 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 369 megabytes
+    Info: Processing ended: Wed Apr 13 15:28:05 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 

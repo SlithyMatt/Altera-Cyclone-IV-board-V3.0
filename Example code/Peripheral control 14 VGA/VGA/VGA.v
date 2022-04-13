@@ -30,7 +30,6 @@ wire  hsync;
 wire   vsync;
 reg  vga_clk;
 
-reg [2:0] vram [0:319][0:239];
 
 parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
    hdat_begin  = 10'd143, 			// End front porch, start display
@@ -41,8 +40,10 @@ parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
    vdat_end  = 10'd514,          // End display, start vertical blanking
    vline_end  = 10'd524;         // Start VSYNC during vertical blanking
 
+reg [2:0] vram [0:7];
 initial
 begin
+/*
    vram[0][0] = 0;
    vram[1][0] = 0;
    vram[2][0] = 0;
@@ -91,6 +92,16 @@ begin
    vram[5][5] = 0;
    vram[6][5] = 0;
    vram[7][5] = 0;
+*/
+   vram[0] = 3'd0;
+	vram[1] = 3'd1;
+	vram[2] = 3'd2;
+	vram[3] = 3'd3;
+	vram[4] = 3'd4;
+	vram[5] = 3'd5;
+	vram[6] = 3'd6;
+	vram[7] = 3'd7;
+	v_dat = 5;
 end
 
 // Divide board clock by 2 to make VGA clock 25MHz
@@ -142,7 +153,9 @@ assign disp_RGB = (dat_act) ?  data : 3'b000;
 // Get color from VRAM
 always @(posedge vga_clk)
 begin
-   data <= vram[(hcount - hdat_begin) >> 1][(vcount - vdat_begin) >> 1];
+	if ((hcount > hdat_begin) && (vcount > vdat_begin))
+		data <= vram[((hcount - hdat_begin) >> 1) & 7];
+		//data <= vram[(hcount - hdat_begin) >> 1][(vcount - vdat_begin) >> 1];
 end
 
 

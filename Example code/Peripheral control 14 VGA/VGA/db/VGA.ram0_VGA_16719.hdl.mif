@@ -1,0 +1,19 @@
+-- begin_signature
+-- VGA
+-- end_signature
+WIDTH=3;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	7 :	111;
+	6 :	110;
+	5 :	101;
+	4 :	100;
+	3 :	011;
+	2 :	010;
+	1 :	001;
+	0 :	000;
+END;
