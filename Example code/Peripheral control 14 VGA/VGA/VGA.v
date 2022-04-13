@@ -30,6 +30,8 @@ wire  hsync;
 wire   vsync;
 reg  vga_clk;
 
+reg [2:0] vram [0:319][0:239];
+
 parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
    hdat_begin  = 10'd143, 			// End front porch, start display
    hdat_end  = 10'd783, 			// End display, start back porch
@@ -38,6 +40,58 @@ parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
    vdat_begin  = 10'd34,         // End vertical blanking, start display
    vdat_end  = 10'd514,          // End display, start vertical blanking
    vline_end  = 10'd524;         // Start VSYNC during vertical blanking
+
+initial
+begin
+   vram[0][0] = 0;
+   vram[1][0] = 0;
+   vram[2][0] = 0;
+   vram[3][0] = 0;
+   vram[4][0] = 0;
+   vram[5][0] = 0;
+   vram[6][0] = 0;
+   vram[7][0] = 0;
+   vram[0][1] = 0;
+   vram[1][1] = 0;
+   vram[2][1] = 7;
+   vram[3][1] = 7;
+   vram[4][1] = 7;
+   vram[5][1] = 7;
+   vram[6][1] = 0;
+   vram[7][1] = 0;
+   vram[0][2] = 0;
+   vram[1][2] = 7;
+   vram[2][2] = 1;
+   vram[3][2] = 3;
+   vram[4][2] = 2;
+   vram[5][2] = 4;
+   vram[6][2] = 7;
+   vram[7][2] = 0;
+   vram[0][3] = 0;
+   vram[1][3] = 7;
+   vram[2][3] = 1;
+   vram[3][3] = 3;
+   vram[4][3] = 2;
+   vram[5][3] = 4;
+   vram[6][3] = 7;
+   vram[7][3] = 0;
+   vram[0][4] = 0;
+   vram[1][4] = 0;
+   vram[2][4] = 7;
+   vram[3][4] = 7;
+   vram[4][4] = 7;
+   vram[5][4] = 7;
+   vram[6][4] = 0;
+   vram[7][4] = 0;
+   vram[0][5] = 0;
+   vram[1][5] = 0;
+   vram[2][5] = 0;
+   vram[3][5] = 0;
+   vram[4][5] = 0;
+   vram[5][5] = 0;
+   vram[6][5] = 0;
+   vram[7][5] = 0;
+end
 
 // Divide board clock by 2 to make VGA clock 25MHz
 always @(posedge clock)
@@ -71,11 +125,10 @@ end
 
 // flag to indicate start of VSYNC
 assign  vcount_ov = (vcount == vline_end);
-//���ݡ�ͬ���ź���
 
 assign dat_act =    ((hcount >= hdat_begin) && (hcount < hdat_end))
      && ((vcount >= vdat_begin) && (vcount < vdat_end));
-	  
+
 // Pull HSYNC high when front porch begins
 assign hsync = (hcount > hsync_end);
 
@@ -83,8 +136,17 @@ assign hsync = (hcount > hsync_end);
 assign vsync = (vcount > vsync_end);
 
 // Output RGB signal only when scanning through display area
-assign disp_RGB = (dat_act) ?  data : 3'b000;       
+assign disp_RGB = (dat_act) ?  data : 3'b000;
 
+
+// Get color from VRAM
+always @(posedge vga_clk)
+begin
+   data <= vram[(hcount - hdat_begin) >> 1][(vcount - vdat_begin) >> 1];
+end
+
+
+/********************** test pattern
 // select pattern with switches 1 and 2
 always @(posedge vga_clk)
 begin
@@ -113,7 +175,7 @@ begin
   v_dat <= 3'h2;   // green
  else if(hcount < 703)
   v_dat <= 3'h1;   // red
- else 
+ else
   v_dat <= 3'h0;   // black
 end
 
@@ -134,9 +196,9 @@ begin
   h_dat <= 3'h2;   // green
  else if(vcount < 454)
   h_dat <= 3'h1;   // red
- else 
+ else
   h_dat <= 3'h0;   // black
 end
+*********************************/
 
 endmodule
-
