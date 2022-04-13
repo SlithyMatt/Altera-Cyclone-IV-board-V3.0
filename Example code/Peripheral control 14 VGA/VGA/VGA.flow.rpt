@@ -1,6 +1,6 @@
 Flow report for VGA
-Tue Jun 18 12:25:00 2013
-Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+Wed Apr 13 00:19:41 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -13,48 +13,51 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
   5. Flow Elapsed Time
   6. Flow OS Summary
   7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Flow Summary                                                                   ;
-+------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 18 12:24:58 2013     ;
-; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Full Version ;
-; Revision Name                      ; VGA                                       ;
-; Top-level Entity Name              ; VGA                                       ;
-; Family                             ; Cyclone IV E                              ;
-; Device                             ; EP4CE6E22C8                               ;
-; Timing Models                      ; Final                                     ;
-; Total logic elements               ; 86 / 6,272 ( 1 % )                        ;
-;     Total combinational functions  ; 85 / 6,272 ( 1 % )                        ;
-;     Dedicated logic registers      ; 30 / 6,272 ( < 1 % )                      ;
-; Total registers                    ; 30                                        ;
-; Total pins                         ; 8 / 92 ( 9 % )                            ;
-; Total virtual pins                 ; 0                                         ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                            ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                             ;
-+------------------------------------+-------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Apr 13 00:19:39 2022       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; VGA                                         ;
+; Top-level Entity Name              ; VGA                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 86 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 85 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 30 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 30                                          ;
+; Total pins                         ; 8 / 92 ( 9 % )                              ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,55 +65,55 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/18/2013 12:24:47 ;
+; Start date & time ; 04/13/2022 00:19:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGA                 ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                  ;
-+-------------------------------------+------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                        ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 155114395475.137152948705076 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --          ; --             ;
-; MISC_FILE                           ; E:/Verilog/VGA_/VGA.dpf      ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing            ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing            ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                   ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                     ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --            ; --          ; Top            ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                          ; --            ; --          ; eda_blast_fpga ;
-+-------------------------------------+------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 172309000280663.164982356753162        ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; E:/Verilog/VGA_/VGA.dpf                ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                    ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 226 MB              ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 321 MB              ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 220 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 250 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:10                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 356 MB              ; 00:00:15                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 1102 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 361 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 500 MB              ; 00:00:01                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:21                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; WWW-7FE5FAF6BCB  ; Windows XP ; 5.1        ; i1686          ;
-; Fitter                    ; WWW-7FE5FAF6BCB  ; Windows XP ; 5.1        ; i1686          ;
-; Assembler                 ; WWW-7FE5FAF6BCB  ; Windows XP ; 5.1        ; i1686          ;
-; TimeQuest Timing Analyzer ; WWW-7FE5FAF6BCB  ; Windows XP ; 5.1        ; i1686          ;
-+---------------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; studio2          ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
+; Fitter               ; studio2          ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
+; Assembler            ; studio2          ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
+; Timing Analyzer      ; studio2          ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

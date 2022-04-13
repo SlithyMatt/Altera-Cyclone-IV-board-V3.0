@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digits
-Tue Apr 12 00:38:07 2022
+Wed Apr 13 08:21:34 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 12 00:38:07 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 08:21:34 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; digits                                      ;
 ; Top-level Entity Name              ; digits                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 18                                          ;
-;     Total combinational functions  ; 18                                          ;
-;     Dedicated logic registers      ; 14                                          ;
-; Total registers                    ; 14                                          ;
+; Total logic elements               ; 66                                          ;
+;     Total combinational functions  ; 66                                          ;
+;     Dedicated logic registers      ; 42                                          ;
+; Total registers                    ; 42                                          ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -178,20 +179,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 18        ;
+; Estimated Total logic elements              ; 66        ;
 ;                                             ;           ;
-; Total combinational functions               ; 18        ;
+; Total combinational functions               ; 66        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 17        ;
+;     -- 4 input functions                    ; 29        ;
+;     -- 3 input functions                    ; 3         ;
+;     -- <=2 input functions                  ; 34        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8         ;
-;     -- arithmetic mode                      ; 10        ;
+;     -- normal mode                          ; 44        ;
+;     -- arithmetic mode                      ; 22        ;
 ;                                             ;           ;
-; Total registers                             ; 14        ;
-;     -- Dedicated logic registers            ; 14        ;
+; Total registers                             ; 42        ;
+;     -- Dedicated logic registers            ; 42        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 13        ;
@@ -199,9 +200,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 12        ;
-; Total fan-out                               ; 85        ;
-; Average fan-out                             ; 1.47      ;
+; Maximum fan-out                             ; 24        ;
+; Total fan-out                               ; 303       ;
+; Average fan-out                             ; 2.26      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |digits                    ; 18 (18)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |digits             ; digits      ; work         ;
+; |digits                    ; 66 (66)             ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |digits             ; digits      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,14 +221,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 42    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |digits|Mux7               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -236,19 +246,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 14                          ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 24                          ;
-;     arith             ; 10                          ;
-;         2 data inputs ; 9                           ;
+; cycloneiii_ff         ; 42                          ;
+;     ENA               ; 9                           ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 71                          ;
+;     arith             ; 22                          ;
+;         2 data inputs ; 21                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 14                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 5                           ;
+;     normal            ; 49                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 29                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.55                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -267,29 +280,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Apr 12 00:38:01 2022
+    Info: Processing started: Wed Apr 13 08:21:28 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digits -c digits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digits.v
     Info (12023): Found entity 1: digits File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 23
 Info (12127): Elaborating entity "digits" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at digits.v(34): object "dec_counter" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 34
-Warning (10230): Verilog HDL assignment warning at digits.v(46): truncated value with size 32 to match size of target (12) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 46
-Warning (10230): Verilog HDL assignment warning at digits.v(51): truncated value with size 32 to match size of target (2) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 51
+Warning (10230): Verilog HDL assignment warning at digits.v(96): truncated value with size 32 to match size of target (24) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 96
+Warning (10230): Verilog HDL assignment warning at digits.v(101): truncated value with size 32 to match size of target (2) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 101
+Warning (10230): Verilog HDL assignment warning at digits.v(118): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 118
+Warning (10230): Verilog HDL assignment warning at digits.v(121): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 121
+Warning (10230): Verilog HDL assignment warning at digits.v(124): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 124
+Warning (10230): Verilog HDL assignment warning at digits.v(127): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 127
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg[1]" is stuck at GND File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 26
     Warning (13410): Pin "seg[7]" is stuck at VCC File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 18 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 459 megabytes
-    Info: Processing ended: Tue Apr 12 00:38:07 2022
+    Info (21061): Implemented 66 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 456 megabytes
+    Info: Processing ended: Wed Apr 13 08:21:34 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 

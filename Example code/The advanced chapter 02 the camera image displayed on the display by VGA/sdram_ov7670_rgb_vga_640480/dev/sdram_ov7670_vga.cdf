@@ -1,13 +1,13 @@
-/* Quartus II 64-Bit Version 11.1 Build 259 01/25/2012 Service Pack 2.11 SJ Full Version */
+/* Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS4) Path("E:/AA_IO_BD/sdram_ov7670_rgb_vga/sdram_ov7670_rgb_vga_640480/dev/") File("sdram_ov7670_vga.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
+		Device PartName(EP4CE6E22) Path("/home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/The advanced chapter 02 the camera image displayed on the display by VGA/sdram_ov7670_rgb_vga_640480/dev/") File("sdram_ov7670_vga.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;

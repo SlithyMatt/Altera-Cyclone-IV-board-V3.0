@@ -1,10 +1,6 @@
-/*学习VGA显示原理,显示彩条信号。
-连接开发板的VGA接口和电脑显示器，
-拨码开关1，2同时不上拨，  则显示8色方格（棋盘格）
-拨码开关1抬上去，2不上拨，则显示变换方向的8色方格（棋盘格）
-拨码开关1，2同时拨上ON，则显示8色横条
-拨码开关1不拨，2拨上ON，则显示8色竖条
-*/
+/************************************************
+ VGA Demo
+*************************************************/
 module VGA(
    clock,
    switch,
@@ -12,17 +8,17 @@ module VGA(
    hsync,
    vsync
 );
-input  clock;     //系统输入时钟 50MHz
+input  clock;     // 50MHz
 input  [1:0]switch;
-output [2:0]disp_RGB;    //VGA数据输出
-output  hsync;     //VGA行同步信号
-output  vsync;     //VGA场同步信号
+output [2:0]disp_RGB;    // RGB pin states
+output  hsync;     // horizontal sync (once per scan line)
+output  vsync;     // vertical sync (once per frame)
 
-reg [9:0] hcount;     //VGA行扫描计数器
-reg [9:0]   vcount;     //VGA场扫描计数器
-reg [2:0]   data;
-reg [2:0]  h_dat;
-reg [2:0]   v_dat;
+reg [9:0] hcount;     // VGA ticks during scan line
+reg [9:0] vcount;     // Scan lines during frame
+reg [2:0] data;		 // B-G-R
+reg [2:0] h_dat;
+reg [2:0] v_dat;
 
 //reg [9:0]   timer;
 
@@ -33,24 +29,23 @@ wire  dat_act;
 wire  hsync;
 wire   vsync;
 reg  vga_clk;
-//VGA行、场扫描时序参数表
-parameter hsync_end   = 10'd95,
-   hdat_begin  = 10'd143,
-   hdat_end  = 10'd783,
-   hpixel_end  = 10'd799,
-   vsync_end  = 10'd1,
-   vdat_begin  = 10'd34,
-   vdat_end  = 10'd514,
-   vline_end  = 10'd524;
 
+parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
+   hdat_begin  = 10'd143, 			// End front porch, start display
+   hdat_end  = 10'd783, 			// End display, start back porch
+   hpixel_end  = 10'd799, 			// End back porch, rest to new HSYNC
+   vsync_end  = 10'd1,           // Turn off VSYNC, continue vertical blanking
+   vdat_begin  = 10'd34,         // End vertical blanking, start display
+   vdat_end  = 10'd514,          // End display, start vertical blanking
+   vline_end  = 10'd524;         // Start VSYNC during vertical blanking
 
+// Divide board clock by 2 to make VGA clock 25MHz
 always @(posedge clock)
 begin
  vga_clk = ~vga_clk;
 end
 
-//************************VGA驱动部分******************************* 
-//行扫描     
+// Increment hcount (pixel lengths on scan line) every VGA clock, reset after end of line
 always @(posedge vga_clk)
 begin
  if (hcount_ov)
@@ -58,8 +53,11 @@ begin
  else
   hcount <= hcount + 10'd1;
 end
+
+// Flag to indicate end of scan line
 assign hcount_ov = (hcount == hpixel_end);
-//场扫描
+
+// Increment vcount every scan line, reset after end of frame
 always @(posedge vga_clk)
 begin
  if (hcount_ov)
@@ -70,72 +68,74 @@ begin
    vcount <= vcount + 10'd1;
  end
 end
+
+// flag to indicate start of VSYNC
 assign  vcount_ov = (vcount == vline_end);
-//数据、同步信号输
+//锟斤拷锟捷★拷同锟斤拷锟脚猴拷锟斤拷
+
 assign dat_act =    ((hcount >= hdat_begin) && (hcount < hdat_end))
      && ((vcount >= vdat_begin) && (vcount < vdat_end));
+	  
+// Pull HSYNC high when front porch begins
 assign hsync = (hcount > hsync_end);
+
+// VSYNC pulled low only during beginning of frame
 assign vsync = (vcount > vsync_end);
-assign disp_RGB = (dat_act) ?  data : 3'h00;       
 
-//************************显示数据处理部分******************************* 
-//图片显示延时计数器
-/*always @(posedge vga_clk)
-begin
- flag <= vcount_ov;
- if(vcount_ov && ~flag)
-  timer <= timer + 1'b1;
-end
-*/
+// Output RGB signal only when scanning through display area
+assign disp_RGB = (dat_act) ?  data : 3'b000;       
 
+// select pattern with switches 1 and 2
 always @(posedge vga_clk)
 begin
  case(switch[1:0])
-  2'd0: data <= h_dat;      //选择横彩条
-  2'd1: data <= v_dat;      //选择竖彩条
-  2'd2: data <= (v_dat ^ h_dat); //产生棋盘格
-  2'd3: data <= (v_dat ~^ h_dat); //产生棋盘格
+  2'd0: data <= h_dat;          		// both switches pressed: horizontal bars
+  2'd1: data <= v_dat; 					// switch 2 only: vertical bars
+  2'd2: data <= (v_dat ^ h_dat);    // switch 1 only: XOR H/V colors (H/V flip)
+  2'd3: data <= (v_dat ~^ h_dat);	// no switches: XNOR H/V colors
  endcase
 end
 
-always @(posedge vga_clk)  //产生竖彩条
+// Set colors based on horizontal scan position
+always @(posedge vga_clk)
 begin
  if(hcount < 223)
-  v_dat <= 3'h7;      //白   
+  v_dat <= 3'h7;   // white
  else if(hcount < 303)
-  v_dat <= 3'h6;   //黄
+  v_dat <= 3'h6;   // cyan
  else if(hcount < 383)
-  v_dat <= 3'h5;   //青
+  v_dat <= 3'h5;   // magenta
  else if(hcount < 463)
-  v_dat <= 3'h4;    //绿
+  v_dat <= 3'h4;    // blue
  else if(hcount < 543)
-  v_dat <= 3'h3;   //紫
+  v_dat <= 3'h3;   // yellow
  else if(hcount < 623)
-  v_dat <= 3'h2;   //红
+  v_dat <= 3'h2;   // green
  else if(hcount < 703)
-  v_dat <= 3'h1;   //蓝
+  v_dat <= 3'h1;   // red
  else 
-  v_dat <= 3'h0;   //黑
+  v_dat <= 3'h0;   // black
 end
 
-always @(posedge vga_clk)  //产生横彩条
+// Set colors based on vertical scan position
+always @(posedge vga_clk)
 begin
  if(vcount < 94)
-  h_dat <= 3'h7;        //白
+  h_dat <= 3'h7;   // white
  else if(vcount < 154)
-  h_dat <= 3'h6;   //黄
+  h_dat <= 3'h6;   // cyan
  else if(vcount < 214)
-  h_dat <= 3'h5;   //青
+  h_dat <= 3'h5;   // magenta
  else if(vcount < 274)
-  h_dat <= 3'h4;    //绿
+  h_dat <= 3'h4;   // blue
  else if(vcount < 334)
-  h_dat <= 3'h3;   //紫
+  h_dat <= 3'h3;   // yellow
  else if(vcount < 394)
-  h_dat <= 3'h2;   //红
+  h_dat <= 3'h2;   // green
  else if(vcount < 454)
-  h_dat <= 3'h1;   //蓝
+  h_dat <= 3'h1;   // red
  else 
-  h_dat <= 3'h0;   //黑
+  h_dat <= 3'h0;   // black
 end
 
 endmodule

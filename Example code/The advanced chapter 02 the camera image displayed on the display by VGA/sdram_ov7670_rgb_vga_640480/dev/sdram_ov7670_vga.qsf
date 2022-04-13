@@ -40,7 +40,7 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:28:10  MARCH 19, 2012"
-set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP2.11"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name MISC_FILE "D:/fpga_project/de2_project/camera_design/sdram_ov7670_vga/dev/sdram_ov7670_vga.dpf"
@@ -425,9 +425,6 @@ set_global_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF
 set_global_assignment -name AUTO_GLOBAL_MEMORY_CONTROLS OFF
 set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIXII AUTO
 set_global_assignment -name AUTO_PACKED_REGISTERS_MAXII AUTO
-set_global_assignment -name AUTO_PACKED_REGISTERS_CYCLONE AUTO
-set_global_assignment -name AUTO_PACKED_REGISTERS OFF
-set_global_assignment -name AUTO_PACKED_REGISTERS_STRATIX AUTO
 set_global_assignment -name NORMAL_LCELL_INSERT ON
 set_global_assignment -name CARRY_OUT_PINS_LCELL_INSERT ON
 set_global_assignment -name AUTO_DELAY_CHAINS ON
