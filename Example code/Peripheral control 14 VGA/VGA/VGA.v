@@ -43,56 +43,6 @@ parameter hsync_end   = 10'd95, 	// Turn off HSYNC, start front porch
 reg [2:0] vram [0:7];
 initial
 begin
-/*
-   vram[0][0] = 0;
-   vram[1][0] = 0;
-   vram[2][0] = 0;
-   vram[3][0] = 0;
-   vram[4][0] = 0;
-   vram[5][0] = 0;
-   vram[6][0] = 0;
-   vram[7][0] = 0;
-   vram[0][1] = 0;
-   vram[1][1] = 0;
-   vram[2][1] = 7;
-   vram[3][1] = 7;
-   vram[4][1] = 7;
-   vram[5][1] = 7;
-   vram[6][1] = 0;
-   vram[7][1] = 0;
-   vram[0][2] = 0;
-   vram[1][2] = 7;
-   vram[2][2] = 1;
-   vram[3][2] = 3;
-   vram[4][2] = 2;
-   vram[5][2] = 4;
-   vram[6][2] = 7;
-   vram[7][2] = 0;
-   vram[0][3] = 0;
-   vram[1][3] = 7;
-   vram[2][3] = 1;
-   vram[3][3] = 3;
-   vram[4][3] = 2;
-   vram[5][3] = 4;
-   vram[6][3] = 7;
-   vram[7][3] = 0;
-   vram[0][4] = 0;
-   vram[1][4] = 0;
-   vram[2][4] = 7;
-   vram[3][4] = 7;
-   vram[4][4] = 7;
-   vram[5][4] = 7;
-   vram[6][4] = 0;
-   vram[7][4] = 0;
-   vram[0][5] = 0;
-   vram[1][5] = 0;
-   vram[2][5] = 0;
-   vram[3][5] = 0;
-   vram[4][5] = 0;
-   vram[5][5] = 0;
-   vram[6][5] = 0;
-   vram[7][5] = 0;
-*/
    vram[0] = 3'd0;
 	vram[1] = 3'd1;
 	vram[2] = 3'd2;
@@ -101,7 +51,6 @@ begin
 	vram[5] = 3'd5;
 	vram[6] = 3'd6;
 	vram[7] = 3'd7;
-	v_dat = 5;
 end
 
 // Divide board clock by 2 to make VGA clock 25MHz
@@ -150,23 +99,13 @@ assign vsync = (vcount > vsync_end);
 assign disp_RGB = (dat_act) ?  data : 3'b000;
 
 
-// Get color from VRAM
-always @(posedge vga_clk)
-begin
-	if ((hcount > hdat_begin) && (vcount > vdat_begin))
-		data <= vram[((hcount - hdat_begin) >> 1) & 7];
-		//data <= vram[(hcount - hdat_begin) >> 1][(vcount - vdat_begin) >> 1];
-end
-
-
-/********************** test pattern
 // select pattern with switches 1 and 2
 always @(posedge vga_clk)
 begin
  case(switch[1:0])
-  2'd0: data <= h_dat;          		// both switches pressed: horizontal bars
+  2'd0: data <= vram[((hcount - hdat_begin) >> 1) & 7] + vcount; // both switches pressed: diagontal lines
   2'd1: data <= v_dat; 					// switch 2 only: vertical bars
-  2'd2: data <= (v_dat ^ h_dat);    // switch 1 only: XOR H/V colors (H/V flip)
+  2'd2: data <= h_dat;    			   // switch 1 only:  horizontal bars  
   2'd3: data <= (v_dat ~^ h_dat);	// no switches: XNOR H/V colors
  endcase
 end
@@ -212,6 +151,5 @@ begin
  else
   h_dat <= 3'h0;   // black
 end
-*********************************/
 
 endmodule

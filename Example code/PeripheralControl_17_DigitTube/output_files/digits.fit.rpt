@@ -1,5 +1,5 @@
 Fitter report for digits
-Wed Apr 13 08:21:38 2022
+Wed Apr 13 23:19:56 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 13 08:21:38 2022       ;
+; Fitter Status                      ; Successful - Wed Apr 13 23:19:56 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; digits                                      ;
 ; Top-level Entity Name              ; digits                                      ;
@@ -619,24 +619,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name              ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Equal0~0          ; LCCOMB_X17_Y20_N30 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Equal0~0          ; LCCOMB_X10_Y20_N22 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; clk               ; PIN_23             ; 24      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; dec_counter3[0]~0 ; LCCOMB_X17_Y20_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dec_counter3[3]~1 ; LCCOMB_X17_Y20_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; dig_counter[15]   ; FF_X33_Y12_N7      ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; dig_counter[23]   ; FF_X33_Y12_N23     ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; dec_counter3[0]~1 ; LCCOMB_X10_Y20_N10 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dec_counter3[2]~0 ; LCCOMB_X10_Y20_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; dig_counter[15]   ; FF_X1_Y10_N7       ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; dig_counter[23]   ; FF_X1_Y10_N23      ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 +-------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                             ;
-+-----------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name            ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk             ; PIN_23         ; 24      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; dig_counter[15] ; FF_X33_Y12_N7  ; 2       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
-; dig_counter[23] ; FF_X33_Y12_N23 ; 16      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-+-----------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                            ;
++-----------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name            ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk             ; PIN_23        ; 24      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; dig_counter[15] ; FF_X1_Y10_N7  ; 2       ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
+; dig_counter[23] ; FF_X1_Y10_N23 ; 16      ; 1                                    ; Global Clock         ; GCLK4            ; --                        ;
++-----------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------+
@@ -644,14 +644,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 53 / 32,401 ( < 1 % ) ;
+; Block interconnects   ; 49 / 32,401 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 1,326 ( 0 % )     ;
-; C4 interconnects      ; 31 / 21,816 ( < 1 % ) ;
-; Direct links          ; 26 / 32,401 ( < 1 % ) ;
+; C4 interconnects      ; 28 / 21,816 ( < 1 % ) ;
+; Direct links          ; 18 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 3 / 10 ( 30 % )       ;
 ; Local interconnects   ; 45 / 10,320 ( < 1 % ) ;
 ; R24 interconnects     ; 0 / 1,289 ( 0 % )     ;
-; R4 interconnects      ; 26 / 28,186 ( < 1 % ) ;
+; R4 interconnects      ; 31 / 28,186 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -728,7 +728,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.50) ; Number of LABs  (Total = 6) ;
+; Number of Signals Sourced Out  (Average = 6.33) ; Number of LABs  (Total = 6) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 1                           ;
 ; 1                                               ; 0                           ;
@@ -742,17 +742,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
 ; 11                                              ; 0                           ;
-; 12                                              ; 1                           ;
-; 13                                              ; 0                           ;
-; 14                                              ; 0                           ;
-; 15                                              ; 1                           ;
+; 12                                              ; 0                           ;
+; 13                                              ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.00) ; Number of LABs  (Total = 6) ;
+; Number of Distinct Inputs  (Average = 5.50) ; Number of LABs  (Total = 6) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 1                           ;
@@ -764,12 +762,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 1                           ;
+; 13                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -902,8 +898,8 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; dig_counter[23] ; dig_counter[23]      ; 3.783             ;
-; dig_counter[15] ; dig_counter[22]      ; 3.673             ;
+; dig_counter[23] ; dig_counter[23]      ; 3.796             ;
+; dig_counter[15] ; dig_counter[22]      ; 3.687             ;
 ; dec_counter2[2] ; dec_counter2[1]      ; 0.072             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
@@ -937,14 +933,14 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 24
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node dig_counter[23]  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 94
+Info (176353): Automatically promoted node dig_counter[23]  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 95
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node dig_counter[23]~67 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 94
-Info (176353): Automatically promoted node dig_counter[15]  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 94
+        Info (176357): Destination node dig_counter[23]~67 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 95
+Info (176353): Automatically promoted node dig_counter[15]  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 95
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node dig_counter[15]~51 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 94
+        Info (176357): Destination node dig_counter[15]~51 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 95
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -957,11 +953,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -969,8 +965,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/output_files/digits.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1107 megabytes
-    Info: Processing ended: Wed Apr 13 08:21:38 2022
+    Info: Peak virtual memory: 1105 megabytes
+    Info: Processing ended: Wed Apr 13 23:19:56 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 

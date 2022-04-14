@@ -7,19 +7,19 @@ Slack : -2.478
 TNS   : -37.570
 
 Type  : Slow 1200mV 85C Model Setup 'dig_counter[23]'
-Slack : -2.438
-TNS   : -25.854
+Slack : -2.335
+TNS   : -23.818
 
 Type  : Slow 1200mV 85C Model Setup 'dig_counter[15]'
-Slack : 0.000
-TNS   : 0.000
+Slack : -0.002
+TNS   : -0.002
 
 Type  : Slow 1200mV 85C Model Hold 'dig_counter[23]'
-Slack : 0.452
+Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'dig_counter[15]'
-Slack : 0.453
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -39,27 +39,27 @@ Slack : -1.487
 TNS   : -2.974
 
 Type  : Slow 1200mV 0C Model Setup 'dig_counter[23]'
-Slack : -2.186
-TNS   : -22.717
+Slack : -2.097
+TNS   : -20.850
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.073
-TNS   : -31.135
+Slack : -2.074
+TNS   : -31.378
 
 Type  : Slow 1200mV 0C Model Setup 'dig_counter[15]'
-Slack : 0.095
+Slack : 0.093
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'dig_counter[23]'
-Slack : 0.402
+Slack : 0.397
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'dig_counter[15]'
-Slack : 0.403
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.417
+Slack : 0.416
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -75,23 +75,23 @@ Slack : -1.487
 TNS   : -2.974
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.875
-TNS   : -7.236
+Slack : -0.906
+TNS   : -7.514
 
 Type  : Fast 1200mV 0C Model Setup 'dig_counter[23]'
-Slack : -0.487
-TNS   : -3.072
+Slack : -0.429
+TNS   : -2.719
 
 Type  : Fast 1200mV 0C Model Setup 'dig_counter[15]'
-Slack : 0.567
+Slack : 0.565
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'dig_counter[23]'
-Slack : 0.186
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'dig_counter[15]'
-Slack : 0.187
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -100,7 +100,7 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -28.560
+TNS   : -28.536
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dig_counter[23]'
 Slack : -1.000

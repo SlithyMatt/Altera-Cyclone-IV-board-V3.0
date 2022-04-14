@@ -27,5 +27,6 @@ clk => count[24].CLK
 clk => count[25].CLK
 clk => count[26].CLK
 clk => count[27].CLK
+beep <= beep_r.DB_MAX_OUTPUT_PORT_TYPE
 
 

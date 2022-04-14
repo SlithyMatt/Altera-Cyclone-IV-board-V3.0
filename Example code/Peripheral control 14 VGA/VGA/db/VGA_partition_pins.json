@@ -24,6 +24,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "switch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[0]",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				}

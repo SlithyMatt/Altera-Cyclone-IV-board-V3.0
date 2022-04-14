@@ -28,23 +28,24 @@ module digits(clk,dig,seg);
 	reg[1:0] dig_sel 		= 0;
 	
 	// decimal digits
-	reg[7:0] seg_zero 	= 8'b11000000;
-	reg[7:0] seg_one  	= 8'b11111001;
-	reg[7:0] seg_two		= 8'b10100100;
-	reg[7:0] seg_three	= 8'b10110000;
-	reg[7:0] seg_four 	= 8'b10011001;
-	reg[7:0] seg_five 	= 8'b10010010;
-	reg[7:0] seg_six		= 8'b10000010;
-	reg[7:0] seg_seven   = 8'b11111000;
-	reg[7:0] seg_eight	= 8'b10000000;
-	reg[7:0] seg_nine    = 8'b10010000;
+	parameter
+		seg_zero 	= 8'b11000000,
+		seg_one  	= 8'b11111001,
+		seg_two		= 8'b10100100,
+		seg_three	= 8'b10110000,
+		seg_four 	= 8'b10011001,
+		seg_five 	= 8'b10010010,
+		seg_six		= 8'b10000010,
+		seg_seven   = 8'b11111000,
+		seg_eight	= 8'b10000000,
+		seg_nine    = 8'b10010000,
 	// hex digits for debug
-	reg[7:0] seg_a 		= 8'b10001000;
-	reg[7:0] seg_b  		= 8'b10000011;
-	reg[7:0] seg_c			= 8'b11000110;
-	reg[7:0] seg_d			= 8'b10100001;
-	reg[7:0] seg_e 		= 8'b10000110;
-	reg[7:0] seg_f 		= 8'b10001110;
+		seg_a 		= 8'b10001000,
+		seg_b  		= 8'b10000011,
+		seg_c			= 8'b11000110,
+		seg_d			= 8'b10100001,
+		seg_e 		= 8'b10000110,
+		seg_f 		= 8'b10001110;
 	
 	reg[7:0] seg_write;
    reg[3:0] seg_sel;

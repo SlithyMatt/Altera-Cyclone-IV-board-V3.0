@@ -1,7 +1,11 @@
 |VGA
 clock => vga_clk.CLK
-switch[0] => ~NO_FANOUT~
-switch[1] => ~NO_FANOUT~
+switch[0] => Mux0.IN3
+switch[0] => Mux1.IN3
+switch[0] => Mux2.IN3
+switch[1] => Mux0.IN2
+switch[1] => Mux1.IN2
+switch[1] => Mux2.IN2
 disp_RGB[0] <= disp_RGB.DB_MAX_OUTPUT_PORT_TYPE
 disp_RGB[1] <= disp_RGB.DB_MAX_OUTPUT_PORT_TYPE
 disp_RGB[2] <= disp_RGB.DB_MAX_OUTPUT_PORT_TYPE

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digits
-Wed Apr 13 08:21:34 2022
+Wed Apr 13 23:19:52 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -15,9 +15,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |digits
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 13 08:21:34 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 13 23:19:52 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; digits                                      ;
 ; Top-level Entity Name              ; digits                                      ;
@@ -236,8 +237,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |digits|Mux7               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |digits|Mux0               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |digits ;
++----------------+----------+--------------------------------------------+
+; Parameter Name ; Value    ; Type                                       ;
++----------------+----------+--------------------------------------------+
+; seg_zero       ; 11000000 ; Unsigned Binary                            ;
+; seg_one        ; 11111001 ; Unsigned Binary                            ;
+; seg_two        ; 10100100 ; Unsigned Binary                            ;
+; seg_three      ; 10110000 ; Unsigned Binary                            ;
+; seg_four       ; 10011001 ; Unsigned Binary                            ;
+; seg_five       ; 10010010 ; Unsigned Binary                            ;
+; seg_six        ; 10000010 ; Unsigned Binary                            ;
+; seg_seven      ; 11111000 ; Unsigned Binary                            ;
+; seg_eight      ; 10000000 ; Unsigned Binary                            ;
+; seg_nine       ; 10010000 ; Unsigned Binary                            ;
+; seg_a          ; 10001000 ; Unsigned Binary                            ;
+; seg_b          ; 10000011 ; Unsigned Binary                            ;
+; seg_c          ; 11000110 ; Unsigned Binary                            ;
+; seg_d          ; 10100001 ; Unsigned Binary                            ;
+; seg_e          ; 10000110 ; Unsigned Binary                            ;
+; seg_f          ; 10001110 ; Unsigned Binary                            ;
++----------------+----------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -280,19 +306,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 13 08:21:28 2022
+    Info: Processing started: Wed Apr 13 23:19:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digits -c digits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digits.v
     Info (12023): Found entity 1: digits File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 23
 Info (12127): Elaborating entity "digits" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at digits.v(96): truncated value with size 32 to match size of target (24) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 96
-Warning (10230): Verilog HDL assignment warning at digits.v(101): truncated value with size 32 to match size of target (2) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 101
-Warning (10230): Verilog HDL assignment warning at digits.v(118): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 118
-Warning (10230): Verilog HDL assignment warning at digits.v(121): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 121
-Warning (10230): Verilog HDL assignment warning at digits.v(124): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 124
-Warning (10230): Verilog HDL assignment warning at digits.v(127): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 127
+Warning (10230): Verilog HDL assignment warning at digits.v(97): truncated value with size 32 to match size of target (24) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 97
+Warning (10230): Verilog HDL assignment warning at digits.v(102): truncated value with size 32 to match size of target (2) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 102
+Warning (10230): Verilog HDL assignment warning at digits.v(119): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 119
+Warning (10230): Verilog HDL assignment warning at digits.v(122): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 122
+Warning (10230): Verilog HDL assignment warning at digits.v(125): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 125
+Warning (10230): Verilog HDL assignment warning at digits.v(128): truncated value with size 32 to match size of target (4) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 128
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg[7]" is stuck at VCC File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/digits.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
@@ -304,7 +330,7 @@ Info (21057): Implemented 79 device resources after synthesis - the final resour
     Info (21061): Implemented 66 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Wed Apr 13 08:21:34 2022
+    Info: Processing ended: Wed Apr 13 23:19:52 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 
