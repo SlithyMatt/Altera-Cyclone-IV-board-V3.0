@@ -1,5 +1,5 @@
 Fitter report for digits
-Wed Apr 13 23:19:56 2022
+Fri Apr 15 00:50:30 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 13 23:19:56 2022       ;
+; Fitter Status                      ; Successful - Fri Apr 15 00:50:30 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; digits                                      ;
 ; Top-level Entity Name              ; digits                                      ;
@@ -957,7 +957,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -965,8 +965,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/PeripheralControl_17_DigitTube/output_files/digits.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1105 megabytes
-    Info: Processing ended: Wed Apr 13 23:19:56 2022
+    Info: Peak virtual memory: 1113 megabytes
+    Info: Processing ended: Fri Apr 15 00:50:30 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 

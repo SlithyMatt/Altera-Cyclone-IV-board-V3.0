@@ -1,77 +1,113 @@
 ------------------------------------------------------------
-TimeQuest Timing Analyzer Summary
+Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -3.549
-TNS   : -16.498
+Slack : -4.625
+TNS   : -20.893
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.530
-TNS   : -111.494
+Slack : -3.539
+TNS   : -136.154
+
+Type  : Slow 1200mV 85C Model Setup 'digits:digits|dig_counter[15]'
+Slack : -0.003
+TNS   : -0.003
 
 Type  : Slow 1200mV 85C Model Hold 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -2.789
-TNS   : -13.032
+Slack : 0.049
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.453
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'digits:digits|dig_counter[15]'
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -84.785
+TNS   : -108.577
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.487
+TNS   : -2.974
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -1.258
-TNS   : -31.097
+Slack : -0.316
+TNS   : -4.474
 
 Type  : Slow 1200mV 0C Model Setup 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -3.481
-TNS   : -15.845
+Slack : -4.693
+TNS   : -20.954
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.289
-TNS   : -100.912
+Slack : -3.053
+TNS   : -120.295
+
+Type  : Slow 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
+Slack : 0.092
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -2.490
-TNS   : -11.395
+Slack : 0.037
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
 Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -84.785
+TNS   : -108.577
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.487
+TNS   : -2.974
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -1.395
-TNS   : -28.116
-
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.382
-TNS   : -22.220
+Slack : -0.566
+TNS   : -6.650
 
 Type  : Fast 1200mV 0C Model Setup 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -1.236
-TNS   : -5.403
+Slack : -1.496
+TNS   : -6.672
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.489
+TNS   : -24.020
+
+Type  : Fast 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
+Slack : 0.564
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -1.313
-TNS   : -6.220
+Slack : 0.070
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.186
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
+Slack : 0.186
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -73.123
+TNS   : -94.118
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
+Slack : -1.000
+TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|ps2_byte_r[0]'
-Slack : -0.334
-TNS   : -4.151
+Slack : -0.033
+TNS   : -0.303
 
 ------------------------------------------------------------

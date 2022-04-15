@@ -1,5 +1,5 @@
 Flow report for digits
-Wed Apr 13 23:20:00 2022
+Fri Apr 15 00:50:34 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 13 23:19:58 2022       ;
+; Flow Status                        ; Successful - Fri Apr 15 00:50:32 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; digits                                      ;
 ; Top-level Entity Name              ; digits                                      ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/13/2022 23:19:46 ;
+; Start date & time ; 04/15/2022 00:50:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; digits              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 172309000280663.164990638606130        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 172309000280663.164999822003401        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -92,9 +92,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 456 MB              ; 00:00:15                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 1105 MB             ; 00:00:04                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 358 MB              ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 457 MB              ; 00:00:15                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 1113 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 360 MB              ; 00:00:00                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 494 MB              ; 00:00:01                           ;
 ; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+

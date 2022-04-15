@@ -20,10 +20,10 @@
  
 ***************************************************/
 
-module digits(clk,dig,seg);
-	input clk;
-	output[3:0] dig;
-	output[7:0] seg;
+module digits(
+	input clk,
+	output[3:0] dig,
+	output[7:0] seg);
 	
 	reg[1:0] dig_sel 		= 0;
 	

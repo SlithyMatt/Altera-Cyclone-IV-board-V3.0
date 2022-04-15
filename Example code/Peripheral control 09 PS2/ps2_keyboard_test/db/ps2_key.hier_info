@@ -1,8 +1,21 @@
 |ps2_key
-clk => clk.IN3
+clk => clk.IN4
 rst_n => rst_n.IN3
 ps2k_clk => ps2k_clk.IN1
 ps2k_data => ps2k_data.IN1
+rs232_tx << my_uart_tx:my_uart_tx.rs232_tx
+dig[0] << digits:digits.dig
+dig[1] << digits:digits.dig
+dig[2] << digits:digits.dig
+dig[3] << digits:digits.dig
+seg[0] << digits:digits.seg
+seg[1] << digits:digits.seg
+seg[2] << digits:digits.seg
+seg[3] << digits:digits.seg
+seg[4] << digits:digits.seg
+seg[5] << digits:digits.seg
+seg[6] << digits:digits.seg
+seg[7] << digits:digits.seg
 
 
 |ps2_key|ps2scan:ps2scan
@@ -65,6 +78,15 @@ ps2k_data => temp_data.DATAB
 ps2k_data => temp_data.DATAB
 ps2k_data => temp_data.DATAB
 ps2k_data => temp_data.DATAB
+ps2_byte[0] <= ps2_asci[0].DB_MAX_OUTPUT_PORT_TYPE
+ps2_byte[1] <= ps2_asci[1].DB_MAX_OUTPUT_PORT_TYPE
+ps2_byte[2] <= ps2_asci[2].DB_MAX_OUTPUT_PORT_TYPE
+ps2_byte[3] <= ps2_asci[3].DB_MAX_OUTPUT_PORT_TYPE
+ps2_byte[4] <= ps2_asci[4].DB_MAX_OUTPUT_PORT_TYPE
+ps2_byte[5] <= <GND>
+ps2_byte[6] <= <VCC>
+ps2_byte[7] <= <GND>
+ps2_state <= ps2_state_r.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ps2_key|speed_select:speed_select
@@ -97,6 +119,7 @@ rst_n => cnt[11].ACLR
 rst_n => cnt[12].ACLR
 rst_n => clk_bps_r.ACLR
 bps_start => always0.IN1
+clk_bps <= clk_bps_r.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ps2_key|my_uart_tx:my_uart_tx
@@ -151,5 +174,47 @@ rx_data[5] => tx_data[5].DATAIN
 rx_data[6] => tx_data[6].DATAIN
 rx_data[7] => tx_data[7].DATAIN
 rx_int => rx_int0.DATAIN
+rs232_tx <= rs232_tx_r.DB_MAX_OUTPUT_PORT_TYPE
+bps_start <= bps_start_r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ps2_key|digits:digits
+clk => dig_counter[0].CLK
+clk => dig_counter[1].CLK
+clk => dig_counter[2].CLK
+clk => dig_counter[3].CLK
+clk => dig_counter[4].CLK
+clk => dig_counter[5].CLK
+clk => dig_counter[6].CLK
+clk => dig_counter[7].CLK
+clk => dig_counter[8].CLK
+clk => dig_counter[9].CLK
+clk => dig_counter[10].CLK
+clk => dig_counter[11].CLK
+clk => dig_counter[12].CLK
+clk => dig_counter[13].CLK
+clk => dig_counter[14].CLK
+clk => dig_counter[15].CLK
+state => Mux3.IN1
+code[0] => Mux3.IN3
+code[1] => Mux2.IN3
+code[2] => Mux1.IN3
+code[3] => Mux0.IN3
+code[4] => Mux3.IN2
+code[5] => Mux2.IN2
+code[6] => Mux1.IN2
+code[7] => Mux0.IN2
+dig[0] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+dig[1] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+dig[2] <= <VCC>
+dig[3] <= dig.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= <VCC>
 
 

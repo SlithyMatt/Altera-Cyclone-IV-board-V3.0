@@ -1,27 +1,27 @@
 
-/*FPGA通过ps2接收键盘数据，然后把接收到的字母A到Z键值转换相应的ASII码，通过串口发送到PC机上。
-实验时，需要接键盘，还要用调试助手，下载程序后，在键盘上按下一个键，比如A，则在PC调试助手上可看到A
+/*FPGA通锟斤拷ps2锟斤拷锟秸硷拷锟斤拷锟斤拷锟捷ｏ拷然锟斤拷锟窖斤拷锟秸碉拷锟斤拷锟斤拷母A锟斤拷Z锟斤拷值转锟斤拷锟斤拷应锟斤拷ASII锟诫，通锟斤拷锟斤拷锟节凤拷锟酵碉拷PC锟斤拷锟较★拷
+实锟斤拷时锟斤拷锟斤拷要锟接硷拷锟教ｏ拷锟斤拷要锟矫碉拷锟斤拷锟斤拷锟街ｏ拷锟斤拷锟截筹拷锟斤拷锟斤拷锟斤拷锟节硷拷锟斤拷锟较帮拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷A锟斤拷锟斤拷锟斤拷PC锟斤拷锟斤拷锟斤拷锟斤拷锟较可匡拷锟斤拷A
 */
 
 
 `timescale 1ns / 1ps
 
-module ps2_key(clk,rst_n,ps2k_clk,ps2k_data,rs232_tx);
+module ps2_key(
+	input clk,
+	input rst_n,
+	input ps2k_clk,
+	input ps2k_data,
+	output rs232_tx,
+	output[3:0] dig,
+	output[7:0] seg);
 
-input clk;			//50M时钟信号
-input rst_n;		//复位信号
-input ps2k_clk;		//PS2接口时钟信号
-input ps2k_data;	//PS2接口数据信号
-output rs232_tx;	// RS232发送数据信号
+wire[7:0] ps2_byte;	// 1byte锟斤拷值
+wire ps2_state;		//锟斤拷锟斤拷状态锟斤拷志位
 
+wire bps_start;		//锟斤拷锟秸碉拷锟斤拷锟捷后，诧拷锟斤拷锟斤拷时锟斤拷锟斤拷锟斤拷锟脚猴拷锟斤拷位
+wire clk_bps;		// clk_bps锟侥高碉拷平为锟斤拷锟秸伙拷锟竭凤拷锟斤拷锟斤拷锟斤拷位锟斤拷锟叫硷拷锟斤拷锟斤拷锟斤拷 
 
-wire[7:0] ps2_byte;	// 1byte键值
-wire ps2_state;		//按键状态标志位
-
-wire bps_start;		//接收到数据后，波特率时钟启动信号置位
-wire clk_bps;		// clk_bps的高电平为接收或者发送数据位的中间采样点 
-
-ps2scan			ps2scan(	.clk(clk),			  	//按键扫描模块
+ps2scan			ps2scan(	.clk(clk),			  	//锟斤拷锟斤拷扫锟斤拷模锟斤拷
 								.rst_n(rst_n),				
 								.ps2k_clk(ps2k_clk),
 								.ps2k_data(ps2k_data),
@@ -43,5 +43,12 @@ my_uart_tx		my_uart_tx(		.clk(clk),
 										.rs232_tx(rs232_tx),
 										.bps_start(bps_start)
 										);
+										
+digits			digits(	.clk(clk),
+								.state(ps2_state),
+								.code(ps2_byte),
+								.dig(dig),
+								.seg(seg)
+								);
 
 endmodule
