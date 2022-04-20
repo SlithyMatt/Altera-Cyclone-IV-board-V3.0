@@ -9,11 +9,13 @@
 module ps2_key(
 	input clk,
 	input rst_n,
-	input ps2k_clk,
-	input ps2k_data,
+	input[3:0] switch,
+	inout ps2k_clk,
+	inout ps2k_data,
 	output rs232_tx,
 	output[3:0] dig,
-	output[7:0] seg);
+	output[7:0] seg,
+	output[3:0] led);
 
 wire[7:0] ps2_byte;	// 1byte��ֵ
 wire ps2_state;		//����״̬��־λ
@@ -22,11 +24,13 @@ wire bps_start;		//���յ����ݺ󣬲�����ʱ�����
 wire clk_bps;		// clk_bps�ĸߵ�ƽΪ���ջ��߷�������λ���м������� 
 
 ps2scan			ps2scan(	.clk(clk),			  	//����ɨ��ģ��
-								.rst_n(rst_n),				
+								.rst_n(rst_n),
+								.switch(switch),
 								.ps2k_clk(ps2k_clk),
 								.ps2k_data(ps2k_data),
 								.ps2_byte(ps2_byte),
-								.ps2_state(ps2_state)
+								.ps2_state(ps2_state),
+								.led(led)
 								);
 
 speed_select	speed_select(	.clk(clk),

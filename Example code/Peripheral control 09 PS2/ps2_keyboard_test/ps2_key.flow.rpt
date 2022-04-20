@@ -1,5 +1,5 @@
 Flow report for ps2_key
-Fri Apr 15 01:26:45 2022
+Wed Apr 20 01:15:51 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Apr 15 01:26:43 2022       ;
+; Flow Status                        ; Successful - Wed Apr 20 01:15:48 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; ps2_key                                     ;
 ; Top-level Entity Name              ; ps2_key                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 167 / 6,272 ( 3 % )                         ;
-;     Total combinational functions  ; 151 / 6,272 ( 2 % )                         ;
-;     Dedicated logic registers      ; 73 / 6,272 ( 1 % )                          ;
-; Total registers                    ; 73                                          ;
-; Total pins                         ; 17 / 92 ( 18 % )                            ;
+; Total logic elements               ; 265 / 6,272 ( 4 % )                         ;
+;     Total combinational functions  ; 245 / 6,272 ( 4 % )                         ;
+;     Dedicated logic registers      ; 101 / 6,272 ( 2 % )                         ;
+; Total registers                    ; 101                                         ;
+; Total pins                         ; 25 / 92 ( 27 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/15/2022 01:26:29 ;
+; Start date & time ; 04/20/2022 01:15:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ps2_key             ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 172309000280663.165000038908699        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 172309000280663.165043173425522        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 460 MB              ; 00:00:15                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 1135 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 362 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 506 MB              ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 461 MB              ; 00:00:15                           ;
+; Fitter               ; 00:00:04     ; 1.1                     ; 1143 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 360 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 500 MB              ; 00:00:02                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

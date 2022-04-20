@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Apr 15 01:26:36 2022
+Analysis & Synthesis Status : Successful - Wed Apr 20 01:15:41 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : ps2_key
 Top-level Entity Name : ps2_key
 Family : Cyclone IV E
-Total logic elements : 165
-    Total combinational functions : 150
-    Dedicated logic registers : 73
-Total registers : 73
-Total pins : 17
+Total logic elements : 264
+    Total combinational functions : 243
+    Dedicated logic registers : 101
+Total registers : 101
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

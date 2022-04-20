@@ -48,11 +48,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "led[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rst_n",
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2k_clk",
 					"strict" : false
 				},
 				{
@@ -60,7 +72,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ps2k_clk",
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
 					"strict" : false
 				}
 			]
