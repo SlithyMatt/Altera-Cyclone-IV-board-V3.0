@@ -234,7 +234,7 @@ always @ (posedge newcode or negedge rst_n) begin
 			got_ack <= 1'b0;
 			passed <= 1'b0;
 			failed <= 1'b0;
-			code_last <= 8'h00;
+			code_last <= 8'h42;
 			code_1 <= 8'h00;
 			code_2 <= 8'h00;
 			code_3 <= 8'h00;
@@ -242,12 +242,12 @@ always @ (posedge newcode or negedge rst_n) begin
 			aa_count <= 0;
 		end
 	else begin
-		//if (code_3 == 8'h00) begin
+		if (code_3 == 8'h00) begin
 			code_3 <= code_2;
 			code_2 <= code_1;
 			code_1 <= code_last;
 			code_last <= temp_data;
-		//end
+		end
 		case (ps2_byte_r)
 			8'h15: ps2_asci <= 8'h51;	//Q
 			8'h1d: ps2_asci <= 8'h57;	//W
@@ -281,7 +281,7 @@ always @ (posedge newcode or negedge rst_n) begin
 		end
 end
 
-assign ps2_byte = aa_count; //~switch[0]? code_last : (~switch[1]? code_1 : (~switch[2]? code_2 : (~switch[3]? code_3 : ps2_asci))); 
+assign ps2_byte = ~switch[0]? code_last : (~switch[1]? code_1 : (~switch[2]? code_2 : (~switch[3]? code_3 : ps2_asci))); 
 assign ps2_state = ps2_state_r;
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_key
-Wed Apr 20 01:15:41 2022
+Wed Apr 20 01:34:45 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -48,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 20 01:15:41 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 20 01:34:45 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; ps2_key                                     ;
 ; Top-level Entity Name              ; ps2_key                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 264                                         ;
-;     Total combinational functions  ; 243                                         ;
-;     Dedicated logic registers      ; 101                                         ;
-; Total registers                    ; 101                                         ;
+; Total logic elements               ; 341                                         ;
+;     Total combinational functions  ; 300                                         ;
+;     Dedicated logic registers      ; 131                                         ;
+; Total registers                    ; 131                                         ;
 ; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -187,20 +187,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 264         ;
+; Estimated Total logic elements              ; 341         ;
 ;                                             ;             ;
-; Total combinational functions               ; 243         ;
+; Total combinational functions               ; 300         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 111         ;
-;     -- 3 input functions                    ; 27          ;
-;     -- <=2 input functions                  ; 105         ;
+;     -- 4 input functions                    ; 150         ;
+;     -- 3 input functions                    ; 44          ;
+;     -- <=2 input functions                  ; 106         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 199         ;
-;     -- arithmetic mode                      ; 44          ;
+;     -- normal mode                          ; 262         ;
+;     -- arithmetic mode                      ; 38          ;
 ;                                             ;             ;
-; Total registers                             ; 101         ;
-;     -- Dedicated logic registers            ; 101         ;
+; Total registers                             ; 131         ;
+;     -- Dedicated logic registers            ; 131         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 25          ;
@@ -208,9 +208,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 104         ;
-; Total fan-out                               ; 1099        ;
-; Average fan-out                             ; 2.78        ;
+; Maximum fan-out                             ; 134         ;
+; Total fan-out                               ; 1433        ;
+; Average fan-out                             ; 2.97        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,10 +219,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
-; |ps2_key                       ; 243 (0)             ; 101 (0)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |ps2_key                           ; ps2_key      ; work         ;
+; |ps2_key                       ; 300 (0)             ; 131 (0)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |ps2_key                           ; ps2_key      ; work         ;
 ;    |digits:digits|             ; 33 (33)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|digits:digits             ; digits       ; work         ;
-;    |my_uart_tx:my_uart_tx|     ; 20 (20)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|my_uart_tx:my_uart_tx     ; my_uart_tx   ; work         ;
-;    |ps2scan:ps2scan|           ; 169 (169)           ; 51 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
+;    |my_uart_tx:my_uart_tx|     ; 18 (18)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|my_uart_tx:my_uart_tx     ; my_uart_tx   ; work         ;
+;    |ps2scan:ps2scan|           ; 228 (228)           ; 81 (81)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
 ;    |speed_select:speed_select| ; 21 (21)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|speed_select:speed_select ; speed_select ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -245,14 +245,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; my_uart_tx:my_uart_tx|bps_start_r~en  ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ps2scan:ps2scan|ps2_asci[5,7]         ; Stuck at GND due to stuck port data_in ;
+; my_uart_tx:my_uart_tx|bps_start_r~en  ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -260,12 +261,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 101   ;
+; Total registers                              ; 131   ;
 ; Number of registers using Synchronous Clear  ; 13    ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 103   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Clock Enable       ; 67    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -276,9 +277,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; my_uart_tx:my_uart_tx|rs232_tx_r       ; 2       ;
-; ps2scan:ps2scan|sending                ; 6       ;
-; ps2scan:ps2scan|start_send             ; 21      ;
-; Total number of inverted registers = 3 ;         ;
+; ps2scan:ps2scan|code_last[1]           ; 2       ;
+; ps2scan:ps2scan|code_last[6]           ; 2       ;
+; ps2scan:ps2scan|sending                ; 7       ;
+; ps2scan:ps2scan|start_send             ; 19      ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -288,8 +291,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ps2_key|my_uart_tx:my_uart_tx|num[0] ;
-; 20:1               ; 3 bits    ; 39 LEs        ; 24 LEs               ; 15 LEs                 ; Yes        ; |ps2_key|ps2scan:ps2scan|num[1]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ps2_key|digits:digits|Mux2           ;
+; 256:1              ; 5 bits    ; 850 LEs       ; 85 LEs               ; 765 LEs                ; Yes        ; |ps2_key|ps2scan:ps2scan|ps2_asci[0]  ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 24 LEs               ; 15 LEs                 ; Yes        ; |ps2_key|ps2scan:ps2scan|num[2]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ps2_key|digits:digits|Mux1           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |ps2_key|ps2scan:ps2scan|ps2_byte[7]  ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |ps2_key|ps2scan:ps2scan|ps2_byte[3]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -324,27 +330,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 25                          ;
-; cycloneiii_ff         ; 101                         ;
+; cycloneiii_ff         ; 131                         ;
 ;     CLR               ; 30                          ;
 ;     CLR SCLR          ; 13                          ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA               ; 8                           ;
-;     ENA CLR           ; 29                          ;
+;     ENA CLR           ; 54                          ;
+;     ENA CLR SLD       ; 5                           ;
 ;     plain             ; 20                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 248                         ;
-;     arith             ; 44                          ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 204                         ;
+; cycloneiii_lcell_comb ; 306                         ;
+;     arith             ; 38                          ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 268                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 58                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 111                         ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 59                          ;
+;         3 data inputs ; 42                          ;
+;         4 data inputs ; 150                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.40                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -353,7 +360,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -363,7 +370,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 20 01:15:34 2022
+    Info: Processing started: Wed Apr 20 01:34:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_key -c ps2_key
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -383,8 +390,6 @@ Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(20): object "got_ack" 
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(21): object "passed" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 21
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(22): object "failed" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 22
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(198): object "key_f0" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 198
-Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(221): object "ps2_asci" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 221
-Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(228): object "code_3" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 228
 Warning (10230): Verilog HDL assignment warning at ps2scan.v(44): truncated value with size 32 to match size of target (14) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 44
 Warning (10240): Verilog HDL Always Construct warning at ps2scan.v(32): inferring latch(es) for variable "send_data_byte", which holds its previous value in one or more paths through the always construct File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
 Warning (10230): Verilog HDL assignment warning at ps2scan.v(278): truncated value with size 32 to match size of target (8) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 278
@@ -430,19 +435,14 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "switch[0]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 12
-    Warning (15610): No output dependent on input pin "switch[1]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 12
-    Warning (15610): No output dependent on input pin "switch[2]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 12
-    Warning (15610): No output dependent on input pin "switch[3]" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 12
-Info (21057): Implemented 289 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 374 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 17 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 264 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 461 megabytes
-    Info: Processing ended: Wed Apr 20 01:15:41 2022
+    Info (21061): Implemented 349 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 460 megabytes
+    Info: Processing ended: Wed Apr 20 01:34:45 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 
