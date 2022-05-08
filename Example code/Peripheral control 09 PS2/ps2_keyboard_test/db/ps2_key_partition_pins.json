@@ -64,14 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "ps2k_clk",
-					"strict" : false
-				},
-				{
-					"name" : "ps2k_data",
-					"strict" : false
-				},
-				{
 					"name" : "switch[1]",
 					"strict" : false
 				},
@@ -88,11 +80,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "ps2k_clk",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "ps2k_data",
 					"strict" : false
 				}
 			]

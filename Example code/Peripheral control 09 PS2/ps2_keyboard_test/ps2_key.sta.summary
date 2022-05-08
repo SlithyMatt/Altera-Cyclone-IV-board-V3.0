@@ -3,31 +3,31 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -7.227
-TNS   : -194.589
+Slack : -5.484
+TNS   : -96.963
 
-Type  : Slow 1200mV 85C Model Setup 'rst_n'
-Slack : -6.432
-TNS   : -77.514
+Type  : Slow 1200mV 85C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -4.337
+TNS   : -50.461
 
 Type  : Slow 1200mV 85C Model Setup 'ps2k_clk'
-Slack : -5.453
-TNS   : -87.168
+Slack : -3.826
+TNS   : -47.761
 
 Type  : Slow 1200mV 85C Model Setup 'ps2scan:ps2scan|num[0]'
-Slack : -3.081
-TNS   : -101.765
+Slack : -2.086
+TNS   : -19.621
 
 Type  : Slow 1200mV 85C Model Setup 'digits:digits|dig_counter[15]'
 Slack : -0.003
 TNS   : -0.003
 
 Type  : Slow 1200mV 85C Model Hold 'ps2scan:ps2scan|num[0]'
-Slack : 0.165
-TNS   : 0.000
+Slack : -0.496
+TNS   : -2.056
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.452
+Slack : 0.453
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'digits:digits|dig_counter[15]'
@@ -38,196 +38,108 @@ Type  : Slow 1200mV 85C Model Hold 'ps2k_clk'
 Slack : 0.485
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'rst_n'
-Slack : 1.734
+Type  : Slow 1200mV 85C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.507
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : -5.040
-TNS   : -136.059
-
-Type  : Slow 1200mV 85C Model Recovery 'ps2scan:ps2scan|send_counter[13]'
-Slack : -4.105
-TNS   : -4.105
-
-Type  : Slow 1200mV 85C Model Recovery 'rst_n'
-Slack : -3.147
-TNS   : -35.388
-
-Type  : Slow 1200mV 85C Model Recovery 'ps2k_clk'
-Slack : -2.769
-TNS   : -45.944
-
-Type  : Slow 1200mV 85C Model Recovery 'ps2scan:ps2scan|num[0]'
-Slack : -2.502
-TNS   : -22.064
-
-Type  : Slow 1200mV 85C Model Removal 'ps2scan:ps2scan|num[0]'
-Slack : 0.388
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 1.418
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'rst_n'
-Slack : 1.676
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'ps2scan:ps2scan|send_counter[13]'
-Slack : 1.733
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'ps2k_clk'
-Slack : 2.499
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2k_clk'
-Slack : -3.481
-TNS   : -31.734
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -95.194
+TNS   : -77.350
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst_n'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2k_clk'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -25.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.487
+TNS   : -57.993
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
 Slack : -1.487
-TNS   : -69.889
+TNS   : -16.357
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
 Slack : -1.487
 TNS   : -2.974
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ps2scan:ps2scan|send_counter[13]'
-Slack : -1.487
-TNS   : -1.487
-
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.633
-TNS   : -176.360
+Slack : -5.115
+TNS   : -86.665
 
-Type  : Slow 1200mV 0C Model Setup 'rst_n'
-Slack : -6.067
-TNS   : -72.829
+Type  : Slow 1200mV 0C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -4.006
+TNS   : -46.035
 
 Type  : Slow 1200mV 0C Model Setup 'ps2k_clk'
-Slack : -5.175
-TNS   : -82.059
+Slack : -3.661
+TNS   : -44.750
 
 Type  : Slow 1200mV 0C Model Setup 'ps2scan:ps2scan|num[0]'
-Slack : -2.728
-TNS   : -90.516
+Slack : -1.836
+TNS   : -17.223
 
 Type  : Slow 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
-Slack : 0.091
+Slack : 0.092
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ps2scan:ps2scan|num[0]'
-Slack : 0.122
-TNS   : 0.000
+Slack : -0.510
+TNS   : -2.582
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
-Slack : 0.402
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ps2k_clk'
 Slack : 0.432
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'rst_n'
-Slack : 1.639
+Type  : Slow 1200mV 0C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.476
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : -4.643
-TNS   : -129.814
-
-Type  : Slow 1200mV 0C Model Recovery 'ps2scan:ps2scan|send_counter[13]'
-Slack : -3.639
-TNS   : -3.639
-
-Type  : Slow 1200mV 0C Model Recovery 'rst_n'
-Slack : -2.938
-TNS   : -32.784
-
-Type  : Slow 1200mV 0C Model Recovery 'ps2k_clk'
-Slack : -2.527
-TNS   : -41.790
-
-Type  : Slow 1200mV 0C Model Recovery 'ps2scan:ps2scan|num[0]'
-Slack : -2.247
-TNS   : -17.482
-
-Type  : Slow 1200mV 0C Model Removal 'ps2scan:ps2scan|num[0]'
-Slack : 0.505
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 1.246
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'ps2scan:ps2scan|send_counter[13]'
-Slack : 1.538
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'rst_n'
-Slack : 1.651
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'ps2k_clk'
-Slack : 2.498
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2k_clk'
-Slack : -3.481
-TNS   : -31.734
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -95.194
+TNS   : -77.350
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst_n'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2k_clk'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -25.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.487
+TNS   : -57.993
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
 Slack : -1.487
-TNS   : -69.889
+TNS   : -17.023
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
 Slack : -1.487
 TNS   : -2.974
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|send_counter[13]'
-Slack : -1.487
-TNS   : -1.487
-
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -3.444
-TNS   : -66.901
+Slack : -1.913
+TNS   : -17.167
 
-Type  : Fast 1200mV 0C Model Setup 'rst_n'
-Slack : -2.501
-TNS   : -29.226
+Type  : Fast 1200mV 0C Model Setup 'ps2scan:ps2scan|newkey'
+Slack : -1.533
+TNS   : -16.633
 
 Type  : Fast 1200mV 0C Model Setup 'ps2k_clk'
-Slack : -1.755
-TNS   : -27.121
+Slack : -1.094
+TNS   : -11.629
 
 Type  : Fast 1200mV 0C Model Setup 'ps2scan:ps2scan|num[0]'
-Slack : -0.752
-TNS   : -21.034
+Slack : -0.603
+TNS   : -6.010
 
 Type  : Fast 1200mV 0C Model Setup 'digits:digits|dig_counter[15]'
-Slack : 0.563
+Slack : 0.564
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -235,83 +147,39 @@ Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'digits:digits|dig_counter[15]'
-Slack : 0.186
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ps2scan:ps2scan|num[0]'
-Slack : 0.186
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ps2scan:ps2scan|newkey'
+Slack : 0.197
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ps2k_clk'
 Slack : 0.199
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'rst_n'
-Slack : 0.470
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : -2.592
-TNS   : -68.287
-
-Type  : Fast 1200mV 0C Model Recovery 'ps2scan:ps2scan|send_counter[13]'
-Slack : -2.161
-TNS   : -2.161
-
-Type  : Fast 1200mV 0C Model Recovery 'ps2scan:ps2scan|num[0]'
-Slack : -1.361
-TNS   : -6.105
-
-Type  : Fast 1200mV 0C Model Recovery 'rst_n'
-Slack : -1.214
-TNS   : -13.183
-
-Type  : Fast 1200mV 0C Model Recovery 'ps2k_clk'
-Slack : -0.906
-TNS   : -13.884
-
-Type  : Fast 1200mV 0C Model Removal 'ps2scan:ps2scan|num[0]'
-Slack : 0.526
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.639
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'rst_n'
-Slack : 0.747
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'ps2scan:ps2scan|send_counter[13]'
-Slack : 0.763
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'ps2k_clk'
-Slack : 1.017
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -83.326
+TNS   : -67.820
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2k_clk'
 Slack : -3.000
-TNS   : -33.146
+TNS   : -24.846
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst_n'
-Slack : -3.000
-TNS   : -5.135
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|newkey'
+Slack : -1.000
+TNS   : -39.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|num[0]'
 Slack : -1.000
-TNS   : -47.000
+TNS   : -11.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'digits:digits|dig_counter[15]'
 Slack : -1.000
 TNS   : -2.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ps2scan:ps2scan|send_counter[13]'
-Slack : -1.000
-TNS   : -1.000
 
 ------------------------------------------------------------
