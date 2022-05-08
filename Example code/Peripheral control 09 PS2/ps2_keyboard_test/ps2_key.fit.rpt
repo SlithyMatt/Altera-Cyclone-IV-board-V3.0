@@ -1,5 +1,5 @@
 Fitter report for ps2_key
-Wed Apr 20 01:34:51 2022
+Sun May  8 16:21:04 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -69,15 +69,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 20 01:34:51 2022       ;
+; Fitter Status                      ; Successful - Sun May  8 16:21:04 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; ps2_key                                     ;
 ; Top-level Entity Name              ; ps2_key                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 337 / 6,272 ( 5 % )                         ;
-;     Total combinational functions  ; 302 / 6,272 ( 5 % )                         ;
+; Total logic elements               ; 333 / 6,272 ( 5 % )                         ;
+;     Total combinational functions  ; 298 / 6,272 ( 5 % )                         ;
 ;     Dedicated logic registers      ; 131 / 6,272 ( 2 % )                         ;
 ; Total registers                    ; 131                                         ;
 ; Total pins                         ; 25 / 92 ( 27 % )                            ;
@@ -157,14 +157,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.0%      ;
-;     Processor 3            ;   1.1%      ;
-;     Processors 4-6         ;   1.1%      ;
+;     Processor 2            ;   2.2%      ;
+;     Processor 3            ;   1.2%      ;
+;     Processors 4-6         ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -174,8 +174,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 498 ) ; 0.00 % ( 0 / 498 )         ; 0.00 % ( 0 / 498 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 498 ) ; 0.00 % ( 0 / 498 )         ; 0.00 % ( 0 / 498 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 494 ) ; 0.00 % ( 0 / 494 )         ; 0.00 % ( 0 / 494 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 494 ) ; 0.00 % ( 0 / 494 )         ; 0.00 % ( 0 / 494 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -198,7 +198,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 488 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 484 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -214,26 +214,26 @@ The pin-out file can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Total logic elements                        ; 337 / 6,272 ( 5 % ) ;
-;     -- Combinational with no register       ; 206                 ;
+; Total logic elements                        ; 333 / 6,272 ( 5 % ) ;
+;     -- Combinational with no register       ; 202                 ;
 ;     -- Register only                        ; 35                  ;
 ;     -- Combinational with a register        ; 96                  ;
 ;                                             ;                     ;
 ; Logic element usage by number of LUT inputs ;                     ;
 ;     -- 4 input functions                    ; 150                 ;
 ;     -- 3 input functions                    ; 44                  ;
-;     -- <=2 input functions                  ; 108                 ;
+;     -- <=2 input functions                  ; 104                 ;
 ;     -- Register only                        ; 35                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 264                 ;
+;     -- normal mode                          ; 260                 ;
 ;     -- arithmetic mode                      ; 38                  ;
 ;                                             ;                     ;
 ; Total registers*                            ; 131 / 6,684 ( 2 % ) ;
 ;     -- Dedicated logic registers            ; 131 / 6,272 ( 2 % ) ;
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )     ;
 ;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 26 / 392 ( 7 % )    ;
+; Total LABs:  partially or completely used   ; 25 / 392 ( 6 % )    ;
 ; Virtual pins                                ; 0                   ;
 ; I/O pins                                    ; 25 / 92 ( 27 % )    ;
 ;     -- Clock pins                           ; 4 / 3 ( 133 % )     ;
@@ -251,12 +251,12 @@ The pin-out file can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 1.5% / 1.5% / 1.6%  ;
-; Peak interconnect usage (total/H/V)         ; 3.1% / 3.0% / 3.2%  ;
+; Average interconnect usage (total/H/V)      ; 1.9% / 1.9% / 2.0%  ;
+; Peak interconnect usage (total/H/V)         ; 7.8% / 7.6% / 8.1%  ;
 ; Maximum fan-out                             ; 134                 ;
 ; Highest non-global fan-out                  ; 134                 ;
-; Total fan-out                               ; 1476                ;
-; Average fan-out                             ; 2.78                ;
+; Total fan-out                               ; 1474                ;
+; Average fan-out                             ; 2.79                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -269,26 +269,26 @@ The pin-out file can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3
 +---------------------------------------------+--------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                ; Low                            ;
 ;                                             ;                    ;                                ;
-; Total logic elements                        ; 337 / 6272 ( 5 % ) ; 0 / 6272 ( 0 % )               ;
-;     -- Combinational with no register       ; 206                ; 0                              ;
+; Total logic elements                        ; 333 / 6272 ( 5 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- Combinational with no register       ; 202                ; 0                              ;
 ;     -- Register only                        ; 35                 ; 0                              ;
 ;     -- Combinational with a register        ; 96                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
 ;     -- 4 input functions                    ; 150                ; 0                              ;
 ;     -- 3 input functions                    ; 44                 ; 0                              ;
-;     -- <=2 input functions                  ; 108                ; 0                              ;
+;     -- <=2 input functions                  ; 104                ; 0                              ;
 ;     -- Register only                        ; 35                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
-;     -- normal mode                          ; 264                ; 0                              ;
+;     -- normal mode                          ; 260                ; 0                              ;
 ;     -- arithmetic mode                      ; 38                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Total registers                             ; 131                ; 0                              ;
 ;     -- Dedicated logic registers            ; 131 / 6272 ( 2 % ) ; 0 / 6272 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
-; Total LABs:  partially or completely used   ; 26 / 392 ( 7 % )   ; 0 / 392 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 25 / 392 ( 6 % )   ; 0 / 392 ( 0 % )                ;
 ;                                             ;                    ;                                ;
 ; Virtual pins                                ; 0                  ; 0                              ;
 ; I/O pins                                    ; 25                 ; 0                              ;
@@ -304,7 +304,7 @@ The pin-out file can be found in /home/matt/workspace/Altera-Cyclone-IV-board-V3
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 1471               ; 5                              ;
+;     -- Total Connections                    ; 1469               ; 5                              ;
 ;     -- Registered Connections               ; 511                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
@@ -610,10 +610,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------+--------------+--------------+
-; |ps2_key                       ; 337 (0)     ; 131 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 25   ; 0            ; 206 (0)      ; 35 (0)            ; 96 (0)           ; |ps2_key                           ; ps2_key      ; work         ;
+; |ps2_key                       ; 333 (0)     ; 131 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 25   ; 0            ; 202 (0)      ; 35 (0)            ; 96 (0)           ; |ps2_key                           ; ps2_key      ; work         ;
 ;    |digits:digits|             ; 33 (33)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 18 (18)          ; |ps2_key|digits:digits             ; digits       ; work         ;
 ;    |my_uart_tx:my_uart_tx|     ; 24 (24)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 6 (6)             ; 12 (12)          ; |ps2_key|my_uart_tx:my_uart_tx     ; my_uart_tx   ; work         ;
-;    |ps2scan:ps2scan|           ; 259 (259)   ; 81 (81)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 178 (178)    ; 29 (29)           ; 52 (52)          ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
+;    |ps2scan:ps2scan|           ; 255 (255)   ; 81 (81)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 174 (174)    ; 29 (29)           ; 52 (52)          ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
 ;    |speed_select:speed_select| ; 21 (21)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 14 (14)          ; |ps2_key|speed_select:speed_select ; speed_select ; work         ;
 +--------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -701,42 +701,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                ;
-+-------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; clk                                 ; PIN_23             ; 62      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; digits:digits|dig_counter[15]       ; FF_X1_Y11_N29      ; 2       ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; my_uart_tx:my_uart_tx|pos_rx_int    ; LCCOMB_X12_Y15_N28 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ps2k_clk                            ; PIN_119            ; 20      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|Equal1~2            ; LCCOMB_X13_Y15_N20 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|WideNor0            ; LCCOMB_X12_Y12_N0  ; 47      ; Clock                      ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; ps2scan:ps2scan|num[1]~7            ; LCCOMB_X13_Y11_N18 ; 14      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|ps2_asci[0]~12      ; LCCOMB_X11_Y13_N6  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|ps2_byte_r[6]       ; FF_X11_Y13_N9      ; 9       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|send_counter[12]~0  ; LCCOMB_X8_Y11_N30  ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|send_counter[13]    ; FF_X6_Y11_N29      ; 16      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|send_counter[13]~79 ; LCCOMB_X6_Y11_N2   ; 1       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|send_counter[13]~93 ; LCCOMB_X8_Y11_N26  ; 13      ; Latch enable               ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; ps2scan:ps2scan|sending             ; FF_X13_Y11_N9      ; 7       ; Output enable              ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|start_send          ; FF_X8_Y11_N1       ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; ps2scan:ps2scan|start_send~0        ; LCCOMB_X8_Y11_N2   ; 1       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; rst_n                               ; PIN_25             ; 134     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; speed_select:speed_select|always0~0 ; LCCOMB_X11_Y15_N30 ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-+-------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                               ;
++-------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; clk                                 ; PIN_23            ; 62      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; digits:digits|dig_counter[15]       ; FF_X33_Y12_N29    ; 2       ; Clock                      ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; my_uart_tx:my_uart_tx|pos_rx_int    ; LCCOMB_X4_Y11_N22 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ps2k_clk                            ; PIN_119           ; 20      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|Equal1~2            ; LCCOMB_X2_Y11_N2  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|WideNor0            ; LCCOMB_X8_Y10_N0  ; 47      ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; ps2scan:ps2scan|num[1]~7            ; LCCOMB_X7_Y9_N12  ; 14      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|ps2_asci[0]~12      ; LCCOMB_X1_Y10_N18 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|ps2_byte_r[6]       ; FF_X1_Y10_N1      ; 9       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|send_counter[12]~0  ; LCCOMB_X4_Y10_N12 ; 13      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|send_counter[13]    ; FF_X6_Y10_N29     ; 16      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|send_counter[13]~79 ; LCCOMB_X4_Y10_N20 ; 1       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|send_counter[13]~93 ; LCCOMB_X4_Y10_N0  ; 13      ; Latch enable               ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; ps2scan:ps2scan|sending             ; FF_X7_Y9_N5       ; 7       ; Output enable              ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|start_send          ; FF_X4_Y10_N31     ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; ps2scan:ps2scan|start_send~0        ; LCCOMB_X4_Y10_N28 ; 1       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; rst_n                               ; PIN_25            ; 134     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; speed_select:speed_select|always0~0 ; LCCOMB_X3_Y9_N30  ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
++-------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                    ;
-+-------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                                 ; PIN_23            ; 62      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; digits:digits|dig_counter[15]       ; FF_X1_Y11_N29     ; 2       ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; ps2scan:ps2scan|WideNor0            ; LCCOMB_X12_Y12_N0 ; 47      ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
-; ps2scan:ps2scan|send_counter[13]~93 ; LCCOMB_X8_Y11_N26 ; 13      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-+-------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                   ;
++-------------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                ; Location         ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk                                 ; PIN_23           ; 62      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; digits:digits|dig_counter[15]       ; FF_X33_Y12_N29   ; 2       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; ps2scan:ps2scan|WideNor0            ; LCCOMB_X8_Y10_N0 ; 47      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
+; ps2scan:ps2scan|send_counter[13]~93 ; LCCOMB_X4_Y10_N0 ; 13      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
++-------------------------------------+------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------+
@@ -744,37 +744,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 443 / 32,401 ( 1 % )  ;
-; C16 interconnects     ; 18 / 1,326 ( 1 % )    ;
-; C4 interconnects      ; 330 / 21,816 ( 2 % )  ;
+; Block interconnects   ; 456 / 32,401 ( 1 % )  ;
+; C16 interconnects     ; 24 / 1,326 ( 2 % )    ;
+; C4 interconnects      ; 387 / 21,816 ( 2 % )  ;
 ; Direct links          ; 84 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 4 / 10 ( 40 % )       ;
-; Local interconnects   ; 220 / 10,320 ( 2 % )  ;
-; R24 interconnects     ; 20 / 1,289 ( 2 % )    ;
-; R4 interconnects      ; 360 / 28,186 ( 1 % )  ;
+; Local interconnects   ; 218 / 10,320 ( 2 % )  ;
+; R24 interconnects     ; 38 / 1,289 ( 3 % )    ;
+; R4 interconnects      ; 404 / 28,186 ( 1 % )  ;
 +-----------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.96) ; Number of LABs  (Total = 26) ;
+; Number of Logic Elements  (Average = 13.32) ; Number of LABs  (Total = 25) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 1                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 3                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 3                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 4                            ;
 ; 16                                          ; 12                           ;
 +---------------------------------------------+------------------------------+
 
@@ -782,54 +782,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.12) ; Number of LABs  (Total = 26) ;
+; LAB-wide Signals  (Average = 2.20) ; Number of LABs  (Total = 25) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 17                           ;
-; 1 Clock                            ; 17                           ;
-; 1 Clock enable                     ; 10                           ;
-; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 3                            ;
-; 2 Clocks                           ; 6                            ;
+; 1 Async. clear                     ; 18                           ;
+; 1 Clock                            ; 18                           ;
+; 1 Clock enable                     ; 11                           ;
+; 1 Sync. load                       ; 1                            ;
+; 2 Async. clears                    ; 1                            ;
+; 2 Clock enables                    ; 1                            ;
+; 2 Clocks                           ; 5                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.88) ; Number of LABs  (Total = 26) ;
+; Number of Signals Sourced  (Average = 18.52) ; Number of LABs  (Total = 25) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 2                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 2                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 3                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 2                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 4                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
+; 25                                           ; 1                            ;
 ; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
 ; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -837,52 +838,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.31) ; Number of LABs  (Total = 26) ;
+; Number of Signals Sourced Out  (Average = 6.76) ; Number of LABs  (Total = 25) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 1                            ;
-; 2                                               ; 4                            ;
-; 3                                               ; 2                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 4                            ;
 ; 4                                               ; 3                            ;
 ; 5                                               ; 1                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 2                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 3                            ;
 ; 8                                               ; 4                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 5                            ;
-; 11                                              ; 1                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 0                            ;
 ; 12                                              ; 0                            ;
 ; 13                                              ; 1                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.88) ; Number of LABs  (Total = 26) ;
+; Number of Distinct Inputs  (Average = 11.60) ; Number of LABs  (Total = 25) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 2                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 3                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
-; 11                                           ; 3                            ;
-; 12                                           ; 3                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 4                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 4                            ;
 ; 13                                           ; 1                            ;
 ; 14                                           ; 2                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 2                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
+; 19                                           ; 1                            ;
 ; 20                                           ; 1                            ;
-; 21                                           ; 2                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1015,18 +1025,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+------------------------+-------------------+
 ; Source Clock(s)                               ; Destination Clock(s)   ; Delay Added in ns ;
 +-----------------------------------------------+------------------------+-------------------+
-; ps2k_clk                                      ; ps2k_clk               ; 88.1              ;
-; I/O                                           ; rst_n                  ; 68.7              ;
-; clk                                           ; clk,rst_n              ; 48.9              ;
-; ps2k_clk,clk,rst_n,I/O                        ; rst_n                  ; 37.5              ;
-; I/O                                           ; clk,rst_n              ; 27.0              ;
-; I/O                                           ; ps2scan:ps2scan|num[0] ; 23.1              ;
-; I/O                                           ; ps2k_clk               ; 22.1              ;
-; ps2k_clk,I/O                                  ; clk,rst_n              ; 19.9              ;
-; ps2k_clk,I/O                                  ; ps2k_clk               ; 13.0              ;
+; ps2k_clk                                      ; ps2k_clk               ; 98.4              ;
+; I/O                                           ; rst_n                  ; 65.1              ;
+; clk                                           ; clk,rst_n              ; 44.9              ;
+; ps2k_clk,clk,rst_n,I/O                        ; rst_n                  ; 41.1              ;
+; I/O                                           ; ps2k_clk               ; 25.3              ;
+; I/O                                           ; clk,rst_n              ; 20.6              ;
+; I/O                                           ; ps2scan:ps2scan|num[0] ; 16.0              ;
+; ps2k_clk,I/O                                  ; ps2k_clk               ; 13.3              ;
+; ps2k_clk,I/O                                  ; clk,rst_n              ; 13.1              ;
+; I/O                                           ; clk                    ; 7.8               ;
 ; clk                                           ; clk                    ; 7.4               ;
-; ps2k_clk,ps2scan:ps2scan|send_counter[13],I/O ; ps2k_clk               ; 6.8               ;
-; I/O                                           ; clk                    ; 6.3               ;
+; ps2k_clk,ps2scan:ps2scan|send_counter[13],I/O ; ps2k_clk               ; 6.1               ;
+; ps2k_clk,ps2scan:ps2scan|send_counter[13]     ; ps2k_clk               ; 5.5               ;
 +-----------------------------------------------+------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1037,59 +1048,59 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------------------+-------------------------------------+-------------------+
 ; Source Register                            ; Destination Register                ; Delay Added in ns ;
 +--------------------------------------------+-------------------------------------+-------------------+
-; ps2scan:ps2scan|send_counter[13]           ; ps2scan:ps2scan|send_counter[6]~31  ; 6.773             ;
-; rst_n                                      ; ps2scan:ps2scan|send_counter[12]~1  ; 5.476             ;
-; ps2scan:ps2scan|num[0]                     ; ps2scan:ps2scan|num[0]              ; 5.048             ;
-; ps2scan:ps2scan|send_led                   ; ps2scan:ps2scan|send_counter[11]~6  ; 4.717             ;
-; digits:digits|dig_counter[15]              ; digits:digits|dig_counter[15]       ; 3.802             ;
-; ps2scan:ps2scan|num[2]                     ; ps2scan:ps2scan|num[3]              ; 3.386             ;
-; ps2scan:ps2scan|num[1]                     ; ps2scan:ps2scan|num[3]              ; 3.386             ;
-; ps2scan:ps2scan|num[3]                     ; ps2scan:ps2scan|num[3]              ; 3.386             ;
-; ps2scan:ps2scan|send_data_byte[3]          ; ps2scan:ps2scan|send_data           ; 3.208             ;
-; ps2scan:ps2scan|send_data_byte[0]          ; ps2scan:ps2scan|send_data           ; 3.208             ;
-; ps2scan:ps2scan|send_data_byte[1]          ; ps2scan:ps2scan|send_data           ; 3.187             ;
-; ps2scan:ps2scan|send_data_byte[2]          ; ps2scan:ps2scan|send_data           ; 3.187             ;
-; ps2scan:ps2scan|send_data_byte[5]          ; ps2scan:ps2scan|send_data           ; 3.141             ;
-; ps2scan:ps2scan|send_data_byte[6]          ; ps2scan:ps2scan|send_data           ; 3.141             ;
-; ps2scan:ps2scan|send_counter[6]~31         ; ps2scan:ps2scan|send_counter[6]~31  ; 3.063             ;
-; ps2scan:ps2scan|send_counter[6]~_emulated  ; ps2scan:ps2scan|send_counter[6]~31  ; 3.063             ;
-; ps2scan:ps2scan|send_counter[5]~36         ; ps2scan:ps2scan|send_counter[5]~36  ; 3.048             ;
-; ps2scan:ps2scan|send_counter[5]~_emulated  ; ps2scan:ps2scan|send_counter[5]~36  ; 3.048             ;
-; ps2scan:ps2scan|start_send                 ; ps2scan:ps2scan|send_led            ; 2.988             ;
-; ps2scan:ps2scan|send_counter[8]~21         ; ps2scan:ps2scan|send_counter[8]~21  ; 2.986             ;
-; ps2scan:ps2scan|send_counter[8]~_emulated  ; ps2scan:ps2scan|send_counter[8]~21  ; 2.986             ;
-; ps2scan:ps2scan|send_counter[7]~26         ; ps2scan:ps2scan|send_counter[7]~26  ; 2.983             ;
-; ps2scan:ps2scan|send_counter[7]~_emulated  ; ps2scan:ps2scan|send_counter[7]~26  ; 2.983             ;
-; ps2scan:ps2scan|send_counter[10]~11        ; ps2scan:ps2scan|send_counter[10]~11 ; 2.979             ;
-; ps2scan:ps2scan|send_counter[10]~_emulated ; ps2scan:ps2scan|send_counter[10]~11 ; 2.979             ;
-; ps2scan:ps2scan|send_counter[9]~_emulated  ; ps2scan:ps2scan|send_counter[9]~16  ; 2.964             ;
-; ps2scan:ps2scan|send_counter[11]~6         ; ps2scan:ps2scan|send_counter[11]~6  ; 2.906             ;
-; ps2scan:ps2scan|send_counter[11]~_emulated ; ps2scan:ps2scan|send_counter[11]~6  ; 2.906             ;
-; ps2scan:ps2scan|send_counter[9]~16         ; ps2scan:ps2scan|send_counter[9]~16  ; 2.900             ;
-; ps2scan:ps2scan|send_data_byte[7]          ; ps2scan:ps2scan|send_data           ; 2.849             ;
-; ps2scan:ps2scan|send_counter[2]~51         ; ps2scan:ps2scan|send_counter[2]~51  ; 2.840             ;
-; ps2scan:ps2scan|send_counter[2]~_emulated  ; ps2scan:ps2scan|send_counter[2]~51  ; 2.840             ;
-; ps2scan:ps2scan|send_counter[0]~56         ; ps2scan:ps2scan|send_counter[0]~56  ; 2.837             ;
-; ps2scan:ps2scan|send_counter[0]~_emulated  ; ps2scan:ps2scan|send_counter[0]~56  ; 2.837             ;
-; ps2scan:ps2scan|send_counter[1]~61         ; ps2scan:ps2scan|send_counter[1]~61  ; 2.836             ;
-; ps2scan:ps2scan|send_counter[1]~_emulated  ; ps2scan:ps2scan|send_counter[1]~61  ; 2.836             ;
-; ps2scan:ps2scan|send_counter[4]~_emulated  ; ps2scan:ps2scan|send_counter[4]~41  ; 2.829             ;
-; ps2scan:ps2scan|send_counter[3]~_emulated  ; ps2scan:ps2scan|send_counter[3]~46  ; 2.828             ;
-; ps2scan:ps2scan|send_counter[12]~_emulated ; ps2scan:ps2scan|send_counter[12]~1  ; 2.827             ;
-; ps2scan:ps2scan|send_counter[4]~41         ; ps2scan:ps2scan|send_counter[4]~41  ; 2.770             ;
-; ps2scan:ps2scan|send_counter[3]~46         ; ps2scan:ps2scan|send_counter[3]~46  ; 2.770             ;
-; ps2scan:ps2scan|send_counter[12]~1         ; ps2scan:ps2scan|send_counter[12]~1  ; 2.551             ;
-; ps2scan:ps2scan|sending                    ; ps2scan:ps2scan|send_led            ; 2.373             ;
-; ps2scan:ps2scan|waiting_ack                ; ps2scan:ps2scan|send_led            ; 2.373             ;
-; ps2k_data                                  ; ps2scan:ps2scan|num[0]              ; 2.152             ;
-; ps2scan:ps2scan|temp_data[7]               ; ps2scan:ps2scan|temp_data[7]        ; 1.580             ;
-; ps2scan:ps2scan|temp_data[5]               ; ps2scan:ps2scan|temp_data[5]        ; 1.562             ;
-; ps2scan:ps2scan|temp_data[2]               ; ps2scan:ps2scan|temp_data[2]        ; 1.391             ;
-; ps2scan:ps2scan|temp_data[3]               ; ps2scan:ps2scan|temp_data[3]        ; 1.372             ;
-; ps2scan:ps2scan|temp_data[4]               ; ps2scan:ps2scan|temp_data[4]        ; 1.347             ;
-; ps2scan:ps2scan|temp_data[1]               ; ps2scan:ps2scan|temp_data[1]        ; 1.229             ;
-; ps2scan:ps2scan|temp_data[0]               ; ps2scan:ps2scan|temp_data[0]        ; 1.168             ;
-; ps2scan:ps2scan|temp_data[6]               ; ps2scan:ps2scan|temp_data[6]        ; 1.155             ;
+; ps2scan:ps2scan|send_counter[13]           ; ps2scan:ps2scan|send_counter[12]~1  ; 7.034             ;
+; ps2scan:ps2scan|num[0]                     ; ps2scan:ps2scan|num[0]              ; 5.504             ;
+; rst_n                                      ; ps2scan:ps2scan|send_counter[12]~1  ; 5.172             ;
+; ps2scan:ps2scan|send_led                   ; ps2scan:ps2scan|send_counter[0]~56  ; 4.525             ;
+; ps2scan:ps2scan|send_data_byte[3]          ; ps2scan:ps2scan|send_data           ; 3.904             ;
+; ps2scan:ps2scan|send_data_byte[0]          ; ps2scan:ps2scan|send_data           ; 3.904             ;
+; ps2scan:ps2scan|num[2]                     ; ps2scan:ps2scan|send_data           ; 3.904             ;
+; ps2scan:ps2scan|send_data_byte[5]          ; ps2scan:ps2scan|send_data           ; 3.822             ;
+; ps2scan:ps2scan|send_data_byte[6]          ; ps2scan:ps2scan|send_data           ; 3.822             ;
+; digits:digits|dig_counter[15]              ; digits:digits|dig_counter[15]       ; 3.790             ;
+; ps2scan:ps2scan|send_data_byte[1]          ; ps2scan:ps2scan|send_data           ; 3.555             ;
+; ps2scan:ps2scan|send_data_byte[2]          ; ps2scan:ps2scan|send_data           ; 3.555             ;
+; ps2scan:ps2scan|num[1]                     ; ps2scan:ps2scan|num[1]              ; 3.449             ;
+; ps2scan:ps2scan|num[3]                     ; ps2scan:ps2scan|num[1]              ; 3.449             ;
+; ps2scan:ps2scan|send_counter[12]~1         ; ps2scan:ps2scan|send_counter[12]~1  ; 3.362             ;
+; ps2scan:ps2scan|send_counter[12]~_emulated ; ps2scan:ps2scan|send_counter[12]~1  ; 3.362             ;
+; ps2scan:ps2scan|send_counter[7]~26         ; ps2scan:ps2scan|send_counter[7]~26  ; 3.320             ;
+; ps2scan:ps2scan|send_counter[7]~_emulated  ; ps2scan:ps2scan|send_counter[7]~26  ; 3.320             ;
+; ps2scan:ps2scan|send_counter[2]~51         ; ps2scan:ps2scan|send_counter[2]~51  ; 3.291             ;
+; ps2scan:ps2scan|send_counter[2]~_emulated  ; ps2scan:ps2scan|send_counter[2]~51  ; 3.291             ;
+; ps2scan:ps2scan|send_counter[11]~6         ; ps2scan:ps2scan|send_counter[11]~6  ; 3.257             ;
+; ps2scan:ps2scan|send_counter[11]~_emulated ; ps2scan:ps2scan|send_counter[11]~6  ; 3.257             ;
+; ps2scan:ps2scan|send_counter[8]~21         ; ps2scan:ps2scan|send_counter[8]~21  ; 3.256             ;
+; ps2scan:ps2scan|send_counter[8]~_emulated  ; ps2scan:ps2scan|send_counter[8]~21  ; 3.256             ;
+; ps2scan:ps2scan|send_counter[1]~61         ; ps2scan:ps2scan|send_counter[1]~61  ; 3.220             ;
+; ps2scan:ps2scan|send_counter[1]~_emulated  ; ps2scan:ps2scan|send_counter[1]~61  ; 3.220             ;
+; ps2scan:ps2scan|send_counter[0]~56         ; ps2scan:ps2scan|send_counter[0]~56  ; 3.203             ;
+; ps2scan:ps2scan|send_counter[0]~_emulated  ; ps2scan:ps2scan|send_counter[0]~56  ; 3.203             ;
+; ps2scan:ps2scan|send_counter[10]~11        ; ps2scan:ps2scan|send_counter[10]~11 ; 3.199             ;
+; ps2scan:ps2scan|send_counter[10]~_emulated ; ps2scan:ps2scan|send_counter[10]~11 ; 3.199             ;
+; ps2scan:ps2scan|start_send                 ; ps2scan:ps2scan|send_led            ; 3.194             ;
+; ps2scan:ps2scan|send_counter[9]~16         ; ps2scan:ps2scan|send_counter[9]~16  ; 3.193             ;
+; ps2scan:ps2scan|send_counter[9]~_emulated  ; ps2scan:ps2scan|send_counter[9]~16  ; 3.193             ;
+; ps2scan:ps2scan|send_counter[3]~46         ; ps2scan:ps2scan|send_counter[3]~46  ; 3.107             ;
+; ps2scan:ps2scan|send_counter[3]~_emulated  ; ps2scan:ps2scan|send_counter[3]~46  ; 3.107             ;
+; ps2scan:ps2scan|send_data_byte[7]          ; ps2scan:ps2scan|send_data           ; 3.023             ;
+; ps2scan:ps2scan|send_counter[4]~41         ; ps2scan:ps2scan|send_counter[4]~41  ; 2.957             ;
+; ps2scan:ps2scan|send_counter[4]~_emulated  ; ps2scan:ps2scan|send_counter[4]~41  ; 2.957             ;
+; ps2scan:ps2scan|send_counter[6]~31         ; ps2scan:ps2scan|send_counter[6]~31  ; 2.893             ;
+; ps2scan:ps2scan|send_counter[6]~_emulated  ; ps2scan:ps2scan|send_counter[6]~31  ; 2.893             ;
+; ps2scan:ps2scan|send_counter[5]~36         ; ps2scan:ps2scan|send_counter[5]~36  ; 2.883             ;
+; ps2scan:ps2scan|send_counter[5]~_emulated  ; ps2scan:ps2scan|send_counter[5]~36  ; 2.883             ;
+; ps2k_data                                  ; ps2scan:ps2scan|num[0]              ; 2.398             ;
+; ps2scan:ps2scan|sending                    ; ps2scan:ps2scan|send_led            ; 2.219             ;
+; ps2scan:ps2scan|waiting_ack                ; ps2scan:ps2scan|send_led            ; 2.219             ;
+; ps2scan:ps2scan|temp_data[5]               ; ps2scan:ps2scan|temp_data[5]        ; 1.454             ;
+; ps2scan:ps2scan|temp_data[4]               ; ps2scan:ps2scan|temp_data[4]        ; 1.391             ;
+; ps2scan:ps2scan|temp_data[7]               ; ps2scan:ps2scan|temp_data[7]        ; 1.385             ;
+; ps2scan:ps2scan|temp_data[3]               ; ps2scan:ps2scan|temp_data[3]        ; 1.382             ;
+; ps2scan:ps2scan|temp_data[1]               ; ps2scan:ps2scan|temp_data[1]        ; 1.379             ;
+; ps2scan:ps2scan|temp_data[2]               ; ps2scan:ps2scan|temp_data[2]        ; 1.368             ;
+; ps2scan:ps2scan|temp_data[0]               ; ps2scan:ps2scan|temp_data[0]        ; 1.306             ;
+; ps2scan:ps2scan|temp_data[6]               ; ps2scan:ps2scan|temp_data[6]        ; 1.287             ;
 +--------------------------------------------+-------------------------------------+-------------------+
 Note: This table only shows the top 53 path(s) that have the largest delay added for hold.
 
@@ -1118,67 +1129,67 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Warning (335093): The Timing Analyzer is analyzing 20 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ps2_key.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[1]~62|combout"
     Warning (332126): Node "ps2scan|send_counter~106|dataa"
     Warning (332126): Node "ps2scan|send_counter~106|combout"
     Warning (332126): Node "ps2scan|send_counter[1]~62|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[0]~57|combout"
     Warning (332126): Node "ps2scan|send_counter~105|dataa"
     Warning (332126): Node "ps2scan|send_counter~105|combout"
     Warning (332126): Node "ps2scan|send_counter[0]~57|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[2]~52|combout"
     Warning (332126): Node "ps2scan|send_counter~104|dataa"
     Warning (332126): Node "ps2scan|send_counter~104|combout"
     Warning (332126): Node "ps2scan|send_counter[2]~52|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[3]~47|combout"
     Warning (332126): Node "ps2scan|send_counter~103|dataa"
     Warning (332126): Node "ps2scan|send_counter~103|combout"
     Warning (332126): Node "ps2scan|send_counter[3]~47|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[4]~42|combout"
     Warning (332126): Node "ps2scan|send_counter~102|dataa"
     Warning (332126): Node "ps2scan|send_counter~102|combout"
     Warning (332126): Node "ps2scan|send_counter[4]~42|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[5]~37|combout"
     Warning (332126): Node "ps2scan|send_counter~101|dataa"
     Warning (332126): Node "ps2scan|send_counter~101|combout"
     Warning (332126): Node "ps2scan|send_counter[5]~37|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[6]~32|combout"
     Warning (332126): Node "ps2scan|send_counter~100|dataa"
     Warning (332126): Node "ps2scan|send_counter~100|combout"
     Warning (332126): Node "ps2scan|send_counter[6]~32|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[7]~27|combout"
     Warning (332126): Node "ps2scan|send_counter~99|dataa"
     Warning (332126): Node "ps2scan|send_counter~99|combout"
     Warning (332126): Node "ps2scan|send_counter[7]~27|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[8]~22|combout"
     Warning (332126): Node "ps2scan|send_counter~98|dataa"
     Warning (332126): Node "ps2scan|send_counter~98|combout"
     Warning (332126): Node "ps2scan|send_counter[8]~22|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[9]~17|combout"
     Warning (332126): Node "ps2scan|send_counter~97|dataa"
     Warning (332126): Node "ps2scan|send_counter~97|combout"
     Warning (332126): Node "ps2scan|send_counter[9]~17|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[10]~12|combout"
     Warning (332126): Node "ps2scan|send_counter~96|dataa"
     Warning (332126): Node "ps2scan|send_counter~96|combout"
     Warning (332126): Node "ps2scan|send_counter[10]~12|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[11]~7|combout"
     Warning (332126): Node "ps2scan|send_counter~95|dataa"
     Warning (332126): Node "ps2scan|send_counter~95|combout"
     Warning (332126): Node "ps2scan|send_counter[11]~7|datac"
-Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Warning (332125): Found combinational loop of 4 nodes File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Warning (332126): Node "ps2scan|send_counter[12]~2|combout"
     Warning (332126): Node "ps2scan|send_counter~94|dataa"
     Warning (332126): Node "ps2scan|send_counter~94|combout"
@@ -1188,21 +1199,21 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DIFFCLK_0n)) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node ps2scan:ps2scan|WideNor0  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 224
+Info (176353): Automatically promoted node ps2scan:ps2scan|WideNor0  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 225
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node ps2scan:ps2scan|send_counter[13]~93  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+Info (176353): Automatically promoted node ps2scan:ps2scan|send_counter[13]~93  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[12]~2 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[11]~7 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[10]~12 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[9]~17 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[8]~22 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[7]~27 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[6]~32 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[5]~37 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[4]~42 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-        Info (176357): Destination node ps2scan:ps2scan|send_counter[3]~47 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[12]~2 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[11]~7 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[10]~12 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[9]~17 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[8]~22 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[7]~27 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[6]~32 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[5]~37 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[4]~42 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+        Info (176357): Destination node ps2scan:ps2scan|send_counter[3]~47 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node digits:digits|dig_counter[15]  File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/digits.v Line: 92
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
@@ -1221,16 +1232,16 @@ Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170089): 4e+02 ns of routing delay (approximately 1.3% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.43 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 8 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin ps2k_clk uses I/O standard 3.3-V LVTTL at 119 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 13
     Info (169178): Pin ps2k_data uses I/O standard 3.3-V LVTTL at 120 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 14
@@ -1242,8 +1253,8 @@ Warning (169177): 8 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin rst_n uses I/O standard 3.3-V LVTTL at 25 File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 11
 Info (144001): Generated suppressed messages file /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 1135 megabytes
-    Info: Processing ended: Wed Apr 20 01:34:51 2022
+    Info: Peak virtual memory: 1140 megabytes
+    Info: Processing ended: Sun May  8 16:21:04 2022
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:08
 

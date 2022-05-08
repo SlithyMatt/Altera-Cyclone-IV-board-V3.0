@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_key
-Wed Apr 20 01:34:45 2022
+Sun May  8 16:20:58 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 20 01:34:45 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun May  8 16:20:58 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; ps2_key                                     ;
 ; Top-level Entity Name              ; ps2_key                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 341                                         ;
-;     Total combinational functions  ; 300                                         ;
+;     Total combinational functions  ; 296                                         ;
 ;     Dedicated logic registers      ; 131                                         ;
 ; Total registers                    ; 131                                         ;
 ; Total pins                         ; 25                                          ;
@@ -189,14 +189,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Estimated Total logic elements              ; 341         ;
 ;                                             ;             ;
-; Total combinational functions               ; 300         ;
+; Total combinational functions               ; 296         ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 150         ;
 ;     -- 3 input functions                    ; 44          ;
-;     -- <=2 input functions                  ; 106         ;
+;     -- <=2 input functions                  ; 102         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 262         ;
+;     -- normal mode                          ; 258         ;
 ;     -- arithmetic mode                      ; 38          ;
 ;                                             ;             ;
 ; Total registers                             ; 131         ;
@@ -209,8 +209,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
 ; Maximum fan-out                             ; 134         ;
-; Total fan-out                               ; 1433        ;
-; Average fan-out                             ; 2.97        ;
+; Total fan-out                               ; 1429        ;
+; Average fan-out                             ; 2.98        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,10 +219,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name  ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
-; |ps2_key                       ; 300 (0)             ; 131 (0)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |ps2_key                           ; ps2_key      ; work         ;
+; |ps2_key                       ; 296 (0)             ; 131 (0)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |ps2_key                           ; ps2_key      ; work         ;
 ;    |digits:digits|             ; 33 (33)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|digits:digits             ; digits       ; work         ;
 ;    |my_uart_tx:my_uart_tx|     ; 18 (18)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|my_uart_tx:my_uart_tx     ; my_uart_tx   ; work         ;
-;    |ps2scan:ps2scan|           ; 228 (228)           ; 81 (81)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
+;    |ps2scan:ps2scan|           ; 224 (224)           ; 81 (81)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|ps2scan:ps2scan           ; ps2scan      ; work         ;
 ;    |speed_select:speed_select| ; 21 (21)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ps2_key|speed_select:speed_select ; speed_select ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -277,11 +277,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; my_uart_tx:my_uart_tx|rs232_tx_r       ; 2       ;
-; ps2scan:ps2scan|code_last[1]           ; 2       ;
-; ps2scan:ps2scan|code_last[6]           ; 2       ;
 ; ps2scan:ps2scan|sending                ; 7       ;
 ; ps2scan:ps2scan|start_send             ; 19      ;
-; Total number of inverted registers = 5 ;         ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
@@ -339,19 +337,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 5                           ;
 ;     plain             ; 20                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 306                         ;
+; cycloneiii_lcell_comb ; 302                         ;
 ;     arith             ; 38                          ;
 ;         2 data inputs ; 36                          ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 268                         ;
+;     normal            ; 264                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
+;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 59                          ;
 ;         3 data inputs ; 42                          ;
 ;         4 data inputs ; 150                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.03                        ;
+; Average LUT depth     ; 3.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -370,7 +368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Apr 20 01:34:38 2022
+    Info: Processing started: Sun May  8 16:20:51 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_key -c ps2_key
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -389,18 +387,18 @@ Info (12128): Elaborating entity "ps2scan" for hierarchy "ps2scan:ps2scan" File:
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(20): object "got_ack" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 20
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(21): object "passed" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 21
 Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(22): object "failed" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 22
-Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(198): object "key_f0" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 198
-Warning (10230): Verilog HDL assignment warning at ps2scan.v(44): truncated value with size 32 to match size of target (14) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 44
-Warning (10240): Verilog HDL Always Construct warning at ps2scan.v(32): inferring latch(es) for variable "send_data_byte", which holds its previous value in one or more paths through the always construct File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Warning (10230): Verilog HDL assignment warning at ps2scan.v(278): truncated value with size 32 to match size of target (8) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 278
-Info (10041): Inferred latch for "send_data_byte[0]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[1]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[2]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[3]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[4]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[5]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[6]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
-Info (10041): Inferred latch for "send_data_byte[7]" at ps2scan.v(32) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 32
+Warning (10036): Verilog HDL or VHDL warning at ps2scan.v(199): object "key_f0" assigned a value but never read File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 199
+Warning (10230): Verilog HDL assignment warning at ps2scan.v(46): truncated value with size 32 to match size of target (14) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 46
+Warning (10240): Verilog HDL Always Construct warning at ps2scan.v(34): inferring latch(es) for variable "send_data_byte", which holds its previous value in one or more paths through the always construct File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Warning (10230): Verilog HDL assignment warning at ps2scan.v(279): truncated value with size 32 to match size of target (8) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 279
+Info (10041): Inferred latch for "send_data_byte[0]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[1]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[2]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[3]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[4]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[5]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[6]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
+Info (10041): Inferred latch for "send_data_byte[7]" at ps2scan.v(34) File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 34
 Info (12128): Elaborating entity "speed_select" for hierarchy "speed_select:speed_select" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 40
 Info (12128): Elaborating entity "my_uart_tx" for hierarchy "my_uart_tx:my_uart_tx" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 49
 Info (12128): Elaborating entity "digits" for hierarchy "digits:digits" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 56
@@ -411,19 +409,19 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (13000): Registers with preset signals will power-up high File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/my_uart_tx.v Line: 66
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[12]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[12]~_emulated" and latch "ps2scan:ps2scan|send_counter[12]~1" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[11]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[11]~_emulated" and latch "ps2scan:ps2scan|send_counter[11]~6" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[10]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[10]~_emulated" and latch "ps2scan:ps2scan|send_counter[10]~11" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[9]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[9]~_emulated" and latch "ps2scan:ps2scan|send_counter[9]~16" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[8]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[8]~_emulated" and latch "ps2scan:ps2scan|send_counter[8]~21" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[7]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[7]~_emulated" and latch "ps2scan:ps2scan|send_counter[7]~26" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[6]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[6]~_emulated" and latch "ps2scan:ps2scan|send_counter[6]~31" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[5]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[5]~_emulated" and latch "ps2scan:ps2scan|send_counter[5]~36" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[4]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[4]~_emulated" and latch "ps2scan:ps2scan|send_counter[4]~41" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[3]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[3]~_emulated" and latch "ps2scan:ps2scan|send_counter[3]~46" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[2]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[2]~_emulated" and latch "ps2scan:ps2scan|send_counter[2]~51" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[0]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[0]~_emulated" and latch "ps2scan:ps2scan|send_counter[0]~56" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
-    Warning (13310): Register "ps2scan:ps2scan|send_counter[1]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[1]~_emulated" and latch "ps2scan:ps2scan|send_counter[1]~61" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 43
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[12]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[12]~_emulated" and latch "ps2scan:ps2scan|send_counter[12]~1" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[11]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[11]~_emulated" and latch "ps2scan:ps2scan|send_counter[11]~6" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[10]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[10]~_emulated" and latch "ps2scan:ps2scan|send_counter[10]~11" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[9]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[9]~_emulated" and latch "ps2scan:ps2scan|send_counter[9]~16" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[8]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[8]~_emulated" and latch "ps2scan:ps2scan|send_counter[8]~21" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[7]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[7]~_emulated" and latch "ps2scan:ps2scan|send_counter[7]~26" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[6]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[6]~_emulated" and latch "ps2scan:ps2scan|send_counter[6]~31" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[5]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[5]~_emulated" and latch "ps2scan:ps2scan|send_counter[5]~36" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[4]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[4]~_emulated" and latch "ps2scan:ps2scan|send_counter[4]~41" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[3]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[3]~_emulated" and latch "ps2scan:ps2scan|send_counter[3]~46" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[2]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[2]~_emulated" and latch "ps2scan:ps2scan|send_counter[2]~51" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[0]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[0]~_emulated" and latch "ps2scan:ps2scan|send_counter[0]~56" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
+    Warning (13310): Register "ps2scan:ps2scan|send_counter[1]" is converted into an equivalent circuit using register "ps2scan:ps2scan|send_counter[1]~_emulated" and latch "ps2scan:ps2scan|send_counter[1]~61" File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2scan.v Line: 45
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "dig[2]" is stuck at VCC File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 16
     Warning (13410): Pin "seg[7]" is stuck at VCC File: /home/matt/workspace/Altera-Cyclone-IV-board-V3.0/Example code/Peripheral control 09 PS2/ps2_keyboard_test/ps2_key.v Line: 17
@@ -441,8 +439,8 @@ Info (21057): Implemented 374 device resources after synthesis - the final resou
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 349 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 460 megabytes
-    Info: Processing ended: Wed Apr 20 01:34:45 2022
+    Info: Peak virtual memory: 462 megabytes
+    Info: Processing ended: Sun May  8 16:20:58 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 

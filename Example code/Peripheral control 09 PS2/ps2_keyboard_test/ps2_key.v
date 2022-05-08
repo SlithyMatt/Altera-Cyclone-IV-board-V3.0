@@ -1,6 +1,6 @@
 
-/*FPGAͨ��ps2���ռ������ݣ�Ȼ���ѽ��յ�����ĸA��Z��ֵת����Ӧ��ASII�룬ͨ�����ڷ��͵�PC���ϡ�
-ʵ��ʱ����Ҫ�Ӽ��̣���Ҫ�õ������֣����س��������ڼ����ϰ���һ����������A������PC���������Ͽɿ���A
+/*
+ FPGA Project: PS/2 Keyboard typing to RS-232 connected terminal
 */
 
 
@@ -17,13 +17,13 @@ module ps2_key(
 	output[7:0] seg,
 	output[3:0] led);
 
-wire[7:0] ps2_byte;	// 1byte��ֵ
-wire ps2_state;		//����״̬��־λ
+wire[7:0] ps2_byte;	// last byte read from PS/2 device
+wire ps2_state;		// state of PS/2 port (low = resetting)
 
-wire bps_start;		//���յ����ݺ󣬲�����ʱ�������ź���λ
-wire clk_bps;		// clk_bps�ĸߵ�ƽΪ���ջ��߷�������λ���м������� 
+wire bps_start;		
+wire clk_bps;		
 
-ps2scan			ps2scan(	.clk(clk),			  	//����ɨ��ģ��
+ps2scan			ps2scan(	.clk(clk),
 								.rst_n(rst_n),
 								.switch(switch),
 								.ps2k_clk(ps2k_clk),

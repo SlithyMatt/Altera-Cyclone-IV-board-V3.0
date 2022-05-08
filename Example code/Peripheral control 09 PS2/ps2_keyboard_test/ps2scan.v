@@ -24,10 +24,12 @@ reg failed = 0;
 assign ps2k_clk = start_send ? 1'b0 : 1'bZ;
 assign ps2k_data = sending ? send_data : 1'bZ;
 
+
 assign led[0] = ps2k_clk;
 assign led[1] = stop_good;
 assign led[2] = parity_good;
 assign led[3] = start_good;
+
 
 always @ (posedge clk or negedge rst_n or posedge send_led) begin
 	if(!rst_n) begin
@@ -134,7 +136,6 @@ always @ (negedge ps2k_clk or negedge rst_n) begin
 					default: ;
 					endcase
 				end
-		
 		else if (!start_send) begin
 				case (num)
 					4'd0:	begin
@@ -234,7 +235,7 @@ always @ (posedge newcode or negedge rst_n) begin
 			got_ack <= 1'b0;
 			passed <= 1'b0;
 			failed <= 1'b0;
-			code_last <= 8'h42;
+			code_last <= 8'h00;
 			code_1 <= 8'h00;
 			code_2 <= 8'h00;
 			code_3 <= 8'h00;
